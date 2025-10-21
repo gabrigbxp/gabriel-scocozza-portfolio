@@ -54,7 +54,9 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
     "cypress": "cypress open",
-    "test:e2e": "cypress run --browser chrome"
+    "test:e2e": "cypress run --browser chrome",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
