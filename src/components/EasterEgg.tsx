@@ -7,11 +7,11 @@ const EasterEgg = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio('/toasty.m4a');
+    audioRef.current = new Audio(`${import.meta.env.BASE_URL}toasty.m4a`);
     audioRef.current.load();
 
     const img = new Image();
-    img.src = '/toasty.png';
+    img.src = `${import.meta.env.BASE_URL}toasty.png`;
 
     return () => {
       if (audioRef.current) {
@@ -39,7 +39,7 @@ const EasterEgg = () => {
   return (
     <Box
       component="img"
-      src="/toasty.png"
+      src={`${import.meta.env.BASE_URL}toasty.png`}
       alt="Toasty!"
       sx={{
         position: 'fixed',

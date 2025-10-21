@@ -135,7 +135,7 @@ export default function Header() {
                 size="small"
                 variant="outlined"
                 startIcon={<DownloadIcon />}
-                href="/cv.pdf"
+                href={`${import.meta.env.BASE_URL}cv.pdf`}
                 sx={styles.downloadButton}
                 target="_blank"
               >
@@ -166,7 +166,7 @@ export default function Header() {
           <Divider sx={{ display: { md: 'none' } }} />
           <List>
             <ListItem disablePadding>
-              <ListItemButton component="a" href="/cv.pdf" target="_blank">
+              <ListItemButton component="a" href={`${import.meta.env.BASE_URL}cv.pdf`} target="_blank">
                 <DownloadIcon sx={styles.downloadIcon} />
                 <ListItemText primary={t('header.downloadCV')} />
               </ListItemButton>
