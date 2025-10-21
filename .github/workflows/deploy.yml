@@ -18,6 +18,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,7 +35,13 @@ jobs:
       - name: Build
         env:
           VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
-        run: npm run build
+        run: |
+          if [ -z "$VITE_WEATHER_API_KEY" ]; then
+            echo "Error: VITE_WEATHER_API_KEY is not set!"
+            exit 1
+          fi
+          echo "Building with API key configured..."
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
