@@ -17,7 +17,9 @@ const mockWeatherData: WeatherForecastResponse = {
   },
   current: {
     temp_c: 28.5,
+    temp_f: 83.3,
     feelslike_c: 30.2,
+    feelslike_f: 86.4,
     condition: {
       text: 'Sunny',
       icon: '//cdn.weatherapi.com/weather/64x64/day/113.png',
@@ -25,7 +27,6 @@ const mockWeatherData: WeatherForecastResponse = {
     },
     last_updated_epoch: 0,
     last_updated: '',
-    temp_f: 0,
     wind_kph: 0,
     wind_dir: '',
     cloud: 0,
@@ -37,13 +38,16 @@ const mockWeatherData: WeatherForecastResponse = {
         date: '2025-01-15',
         day: {
           maxtemp_c: 30,
+          maxtemp_f: 86,
           mintemp_c: 22,
+          mintemp_f: 71.6,
           condition: {
             text: 'Sunny',
             icon: '//cdn.weatherapi.com/weather/64x64/day/113.png',
             code: 0,
           },
           avgtemp_c: 0,
+          avgtemp_f: 0,
           maxwind_kph: 0,
           avghumidity: 0,
         },
@@ -53,13 +57,16 @@ const mockWeatherData: WeatherForecastResponse = {
         date: '2025-01-16',
         day: {
           maxtemp_c: 28,
+          maxtemp_f: 82.4,
           mintemp_c: 20,
+          mintemp_f: 68,
           condition: {
             text: 'Partly cloudy',
             icon: '//cdn.weatherapi.com/weather/64x64/day/116.png',
             code: 0,
           },
           avgtemp_c: 0,
+          avgtemp_f: 0,
           maxwind_kph: 0,
           avghumidity: 0,
         },
@@ -69,13 +76,16 @@ const mockWeatherData: WeatherForecastResponse = {
         date: '2025-01-17',
         day: {
           maxtemp_c: 26,
+          maxtemp_f: 78.8,
           mintemp_c: 19,
+          mintemp_f: 66.2,
           condition: {
             text: 'Overcast',
             icon: '//cdn.weatherapi.com/weather/64x64/day/122.png',
             code: 0,
           },
           avgtemp_c: 0,
+          avgtemp_f: 0,
           maxwind_kph: 0,
           avghumidity: 0,
         },
@@ -85,13 +95,16 @@ const mockWeatherData: WeatherForecastResponse = {
         date: '2025-01-18',
         day: {
           maxtemp_c: 26,
+          maxtemp_f: 78.8,
           mintemp_c: 19,
+          mintemp_f: 66.2,
           condition: {
             text: 'Cloudy',
             icon: '//cdn.weatherapi.com/weather/64x64/day/122.png',
             code: 0,
           },
           avgtemp_c: 0,
+          avgtemp_f: 0,
           maxwind_kph: 0,
           avghumidity: 0,
         },
@@ -240,11 +253,11 @@ describe('Weather', () => {
     });
 
     it('should display current temperature', () => {
-      expect(screen.getByText(/29°c/i)).toBeInTheDocument(); // Rounded from 28.5
+      expect(screen.getByText(/83°f/i)).toBeInTheDocument();
     });
 
     it('should display feels like temperature', () => {
-      expect(screen.getByText(/feels like.*30/i)).toBeInTheDocument(); // Rounded from 30.2
+      expect(screen.getByText(/feels like.*86/i)).toBeInTheDocument();
     });
 
     it('should display current weather icon', () => {
@@ -264,8 +277,8 @@ describe('Weather', () => {
     });
 
     it('should display max and min temperatures in forecast', () => {
-      expect(screen.getByText(/max.*28/i)).toBeInTheDocument();
-      expect(screen.getByText(/min.*20/i)).toBeInTheDocument();
+      expect(screen.getByText(/max.*82/i)).toBeInTheDocument();
+      expect(screen.getByText(/min.*68/i)).toBeInTheDocument();
     });
 
     it('should display forecast weather icons', () => {

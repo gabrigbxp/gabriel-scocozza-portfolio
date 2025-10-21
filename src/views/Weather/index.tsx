@@ -8,17 +8,26 @@ import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { EXTERNAL_LINKS, WEATHER_CONFIG } from '@constants';
 import { useTranslation, useWeather } from '@hooks';
+import { useAppSelector } from '@hooks/useRedux';
 import type { WeatherForecastDay } from 'services/weather';
 import * as styles from './index.styles';
 
+type TemperatureUnit = 'C' | 'F';
+
 const Weather = () => {
   const { t } = useTranslation();
+  const locale = useAppSelector((state) => state.locale.current);
   const [apiKey, setApiKey] = useState('');
+  const [unit, setUnit] = useState<TemperatureUnit>(locale === 'es' ? 'C' : 'F');
   const { fetchByCoords, fetchByIp, canQuery, isLoading, error, data } = useWeather(apiKey);
 
   const days = useMemo(() => (data?.forecast?.forecastday ?? []).slice(0, WEATHER_CONFIG.forecastDays), [data]);
+
+  const getTemp = (tempC: number, tempF: number) => Math.round(unit === 'C' ? tempC : tempF);
 
   const fetchWeather = async (useGeo: boolean) => {
     if (!canQuery) return;
@@ -43,7 +52,10 @@ const Weather = () => {
       <Typography variant="body2" gutterBottom>
         {t('weather.description')}
         <br />
-        {t('weather.instructions')} <Link href={EXTERNAL_LINKS.weatherApiDocs}>{t('weather.documentation')}</Link>{' '}
+        {t('weather.instructions')}{' '}
+        <Link href={EXTERNAL_LINKS.weatherApiDocs} target="_blank">
+          {t('weather.documentation')}
+        </Link>{' '}
         {t('weather.instructionsContinue')}
       </Typography>
       <Typography variant="body2" sx={styles.noteBox}>
@@ -57,6 +69,22 @@ const Weather = () => {
           onChange={(e) => setApiKey(e.target.value)}
           fullWidth
         />
+        <ToggleButtonGroup
+          value={unit}
+          exclusive
+          onChange={(_e, newUnit) => {
+            if (newUnit !== null) setUnit(newUnit);
+          }}
+          size="small"
+          aria-label={t('weather.unit')}
+        >
+          <ToggleButton value="C" aria-label={t('weather.celsius')}>
+            {t('weather.celsius')}
+          </ToggleButton>
+          <ToggleButton value="F" aria-label={t('weather.fahrenheit')}>
+            {t('weather.fahrenheit')}
+          </ToggleButton>
+        </ToggleButtonGroup>
         <Stack direction="row" spacing={1}>
           <Button
             sx={{
@@ -96,9 +124,14 @@ const Weather = () => {
           </Typography>
           <Stack direction="row" spacing={2} alignItems="center">
             <img src={data.current.condition.icon} alt={data.current.condition.text} />
-            <Typography variant="h4">{Math.round(data.current.temp_c)}°C</Typography>
+            <Typography variant="h4">
+              {getTemp(data.current.temp_c, data.current.temp_f)}°{unit}
+            </Typography>
             <Typography variant="body2">
-              {t('weather.feelsLike', { temp: Math.round(data.current.feelslike_c) })}
+              {t('weather.feelsLike', {
+                temp: getTemp(data.current.feelslike_c, data.current.feelslike_f),
+                unit,
+              })}
             </Typography>
           </Stack>
           <Divider sx={styles.divider} />
@@ -110,8 +143,12 @@ const Weather = () => {
               <Box key={d.date} sx={styles.forecastCard}>
                 <Typography variant="body2">{d.date}</Typography>
                 <img src={d.day.condition.icon} alt={d.day.condition.text} />
-                <Typography variant="body2">{t('weather.max', { temp: Math.round(d.day.maxtemp_c) })}</Typography>
-                <Typography variant="body2">{t('weather.min', { temp: Math.round(d.day.mintemp_c) })}</Typography>
+                <Typography variant="body2">
+                  {t('weather.max', { temp: getTemp(d.day.maxtemp_c, d.day.maxtemp_f), unit })}
+                </Typography>
+                <Typography variant="body2">
+                  {t('weather.min', { temp: getTemp(d.day.mintemp_c, d.day.mintemp_f), unit })}
+                </Typography>
               </Box>
             ))}
           </Box>

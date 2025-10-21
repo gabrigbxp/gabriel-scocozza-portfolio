@@ -18,12 +18,16 @@ export interface WeatherCurrent {
   cloud: number;
   humidity: number;
   feelslike_c: number;
+  feelslike_f: number;
 }
 
 export interface WeatherDay {
   maxtemp_c: number;
+  maxtemp_f: number;
   mintemp_c: number;
+  mintemp_f: number;
   avgtemp_c: number;
+  avgtemp_f: number;
   maxwind_kph: number;
   avghumidity: number;
   condition: WeatherCondition;

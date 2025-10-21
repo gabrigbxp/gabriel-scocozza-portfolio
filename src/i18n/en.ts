@@ -8,15 +8,17 @@ export default {
     thisApp: 'This App',
     contact: 'Contact',
     downloadCV: 'Download CV',
-    hi: 'Hi, I\'m',
+    hi: "Hi, I'm",
     avatarAlt: 'Picture of Gabriel Gustavo Scocozza',
     toggleLanguage: 'Cambiar a Español',
   },
   about: {
     title: 'About',
-    greeting: '👋 Hi! I\'m Gabriel Gustavo Scocozza',
-    intro: 'A Full Stack Developer with over 10 years of experience specializing in JavaScript, TypeScript, PHP, React, and Node.js. I\'ve worked across diverse industries including tourism, government, and B2B/B2C platforms, building scalable microservices, microfrontends, and e-commerce solutions.',
-    passion: 'I\'m passionate about web technologies, creative coding, and continuous learning. This site showcases my professional journey, technical stack, and some playable MS-DOS classics, because nostalgia meets code! Do you know the Konami code?',
+    greeting: "👋 Hi! I'm Gabriel Gustavo Scocozza",
+    intro:
+      "A Full Stack Developer with over 10 years of experience specializing in JavaScript, TypeScript, PHP, React, and Node.js. I've worked across diverse industries including tourism, government, and B2B/B2C platforms, building scalable microservices, microfrontends, and e-commerce solutions.",
+    passion:
+      "I'm passionate about web technologies, creative coding, and continuous learning. This site showcases my professional journey, technical stack, and some playable MS-DOS classics, because nostalgia meets code! Do you know the Konami code?",
     highlights: {
       experience: '10+ Years Experience',
       position: 'Full Stack Developer',
@@ -24,7 +26,8 @@ export default {
       languages: 'English (Fluent) & Spanish (Native)',
     },
     softSkills: 'Soft Skills',
-    funFact: '💡 Fun fact: I\'ve significantly increased operational effectiveness through automation reducing processes from minutes to seconds, and I enjoy integrating complex systems to create seamless user experiences.',
+    funFact:
+      "💡 Fun fact: I've significantly increased operational effectiveness through automation reducing processes from minutes to seconds, and I enjoy integrating complex systems to create seamless user experiences.",
   },
   techstack: {
     title: 'Tech Stack',
@@ -207,7 +210,7 @@ export default {
           2: 'Developed image generator procedure in MySQL, considering working days & variable interval according to need, reducing operational time from 2 to 5 minutes to 2 to 5 seconds (according to different variables)',
           3: 'Developed image generator for tickets via barcodes',
           4: 'Created the necessary entities, controllers, and services, along with the unit tests',
-          5: 'Implemented ticket printing as a JAVA middleware & a complex system of scripts for deployment onto the printing systems enabling to use printers over the network that was not prepared for that, saving money on printers\' exchange',
+          5: "Implemented ticket printing as a JAVA middleware & a complex system of scripts for deployment onto the printing systems enabling to use printers over the network that was not prepared for that, saving money on printers' exchange",
         },
       },
       'gray-line': {
@@ -252,10 +255,13 @@ export default {
     useGeolocation: 'Use geolocation',
     detectByIP: 'Detect by IP',
     loading: 'Loading...',
-    feelsLike: 'Feels like: {{temp}}°C',
+    unit: 'Unit',
+    celsius: '°C',
+    fahrenheit: '°F',
+    feelsLike: 'Feels like: {{temp}}°{{unit}}',
     next3Days: 'Next 3 days',
-    max: 'Max: {{temp}}°C',
-    min: 'Min: {{temp}}°C',
+    max: 'Max: {{temp}}°{{unit}}',
+    min: 'Min: {{temp}}°{{unit}}',
   },
   games: {
     title: 'Games',
@@ -272,6 +278,34 @@ export default {
       description:
         'DooM is a 1993 first-person shooter game developed and published by id Software for MS-DOS. While it was not the first first-person shooter game, Doom was the title that marked a turning point in the genre, setting new standards and influencing countless games that followed.',
     },
+    achievement: {
+      title: 'How was it achieved?',
+      close: 'close',
+      jsDos: {
+        title: 'js-dos Emulator',
+        description:
+          'is a powerful JavaScript library that enables running DOS and Windows 9x programs directly in modern browsers and Node.js environments. It provides a complete emulation layer that brings classic games to life without requiring any additional software installation.',
+      },
+      selfHosted: {
+        title: 'Self-Hosted Implementation',
+        description:
+          'To ensure reliability and avoid dependency on external servers, this portfolio uses a fully self-hosted instance. Both the emulator engine and game files are served directly from this application, providing:',
+        features: {
+          offline: 'Complete offline functionality',
+          noTracking: 'No third-party tracking or analytics',
+          fastLoading: 'Fast loading times with optimized caching',
+          fullControl: 'Full control over the gaming experience',
+        },
+      },
+      legal: {
+        title: 'Legal Notice',
+        description:
+          'The games featured here are classic DOS titles that have been made freely available or are considered abandonware. They are presented for educational and demonstration purposes only, with no commercial intent. All games are adapted to run in modern browsers using open-source emulation technology.',
+      },
+      technologies: {
+        title: 'Technologies used:',
+      },
+    },
   },
   contact: {
     title: 'Contact',
@@ -284,11 +318,12 @@ export default {
   },
   thisApp: {
     title: 'This App',
-    intro: 'I built this portfolio from scratch following React recommendations, which led me to use Vite for the first time.',
+    intro:
+      'I built this portfolio from scratch following React recommendations, which led me to use Vite for the first time.',
     design: {
       title: 'Design Approach',
       content:
-        "I should mention that I have no UI/UX experience, I simply lack imagination for design and have never studied it formally. So I decided to draw inspiration from portfolios I admire and try to replicate certain features that seemed interesting.",
+        'I should mention that I have no UI/UX experience, I simply lack imagination for design and have never studied it formally. So I decided to draw inspiration from portfolios I admire and try to replicate certain features that seemed interesting.',
     },
     materialUI: {
       title: 'Material-UI',

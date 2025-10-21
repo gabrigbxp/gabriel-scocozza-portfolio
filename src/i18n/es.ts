@@ -15,8 +15,10 @@ export default {
   about: {
     title: 'Acerca de',
     greeting: '👋 ¡Hola! Soy Gabriel Gustavo Scocozza',
-    intro: 'Un Desarrollador Full Stack con más de 10 años de experiencia especializado en JavaScript, TypeScript, PHP, React y Node.js. He trabajado en diversas industrias incluyendo turismo, gobierno y plataformas B2B/B2C, construyendo microservicios escalables, microfrontends y soluciones de e-commerce.',
-    passion: 'Me apasionan las tecnologías web, la programación creativa y el aprendizaje continuo. Este sitio muestra mi trayectoria profesional, mi stack tecnológico y algunos clásicos de MS-DOS jugables ¡porque la nostalgia se encuentra con el código! ¿Conoces el código Konami?',
+    intro:
+      'Un Desarrollador Full Stack con más de 10 años de experiencia especializado en JavaScript, TypeScript, PHP, React y Node.js. He trabajado en diversas industrias incluyendo turismo, gobierno y plataformas B2B/B2C, construyendo microservicios escalables, microfrontends y soluciones de e-commerce.',
+    passion:
+      'Me apasionan las tecnologías web, la programación creativa y el aprendizaje continuo. Este sitio muestra mi trayectoria profesional, mi stack tecnológico y algunos clásicos de MS-DOS jugables ¡porque la nostalgia se encuentra con el código! ¿Conoces el código Konami?',
     highlights: {
       experience: '10+ Años de Experiencia',
       position: 'Desarrollador Full Stack',
@@ -24,7 +26,8 @@ export default {
       languages: 'Inglés (Fluido) y Español (Nativo)',
     },
     softSkills: 'Habilidades Blandas',
-    funFact: '💡 Dato curioso: He aumentado significativamente la efectividad operacional mediante automatización reduciendo procesos de minutos a segundos, y disfruto integrar sistemas complejos para crear experiencias de usuario fluidas.',
+    funFact:
+      '💡 Dato curioso: He aumentado significativamente la efectividad operacional mediante automatización reduciendo procesos de minutos a segundos, y disfruto integrar sistemas complejos para crear experiencias de usuario fluidas.',
   },
   techstack: {
     title: 'Stack Tecnológico',
@@ -252,10 +255,13 @@ export default {
     useGeolocation: 'Usar geolocalización',
     detectByIP: 'Detectar por IP',
     loading: 'Cargando...',
-    feelsLike: 'Sensación térmica: {{temp}}°C',
+    unit: 'Unidad',
+    celsius: '°C',
+    fahrenheit: '°F',
+    feelsLike: 'Sensación térmica: {{temp}}°{{unit}}',
     next3Days: 'Próximos 3 días',
-    max: 'Máx: {{temp}}°C',
-    min: 'Mín: {{temp}}°C',
+    max: 'Máx: {{temp}}°{{unit}}',
+    min: 'Mín: {{temp}}°{{unit}}',
   },
   games: {
     title: 'Juegos',
@@ -271,6 +277,34 @@ export default {
     doom: {
       description:
         'DooM es un juego de disparos en primera persona de 1993 desarrollado y publicado por id Software para MS-DOS. Si bien no fue el primer juego de disparos en primera persona, Doom fue el título que marcó un punto de inflexión en el género, estableciendo nuevos estándares e influyendo en innumerables juegos que siguieron.',
+    },
+    achievement: {
+      title: '¿Cómo se logró?',
+      close: 'cerrar',
+      jsDos: {
+        title: 'Emulador js-dos',
+        description:
+          'es una potente librería de JavaScript que permite ejecutar programas de DOS y Windows 9x directamente en navegadores modernos y entornos Node.js. Proporciona una capa de emulación completa que da vida a juegos clásicos sin requerir ninguna instalación de software adicional.',
+      },
+      selfHosted: {
+        title: 'Implementación local',
+        description:
+          'Para garantizar la confiabilidad y evitar la dependencia de servidores externos, este portfolio utiliza una instancia completamente local. Tanto el motor del emulador como los archivos de juegos se sirven directamente desde esta aplicación, proporcionando:',
+        features: {
+          offline: 'Funcionalidad completamente offline',
+          noTracking: 'Sin rastreo o análisis de terceros',
+          fastLoading: 'Tiempos de carga rápidos con caché optimizado',
+          fullControl: 'Control total sobre la experiencia de juego',
+        },
+      },
+      legal: {
+        title: 'Aviso Legal',
+        description:
+          'Los juegos presentados aquí son títulos clásicos de DOS que han sido puestos a disposición libremente o se consideran abandonware. Se presentan únicamente con fines educativos y de demostración, sin intención comercial. Todos los juegos están adaptados para ejecutarse en navegadores modernos utilizando tecnología de emulación de código abierto.',
+      },
+      technologies: {
+        title: 'Tecnologías utilizadas:',
+      },
     },
   },
   contact: {
