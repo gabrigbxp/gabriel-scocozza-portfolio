@@ -2,7 +2,6 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { WeatherForecastResponse } from 'services/weather';
 
 export interface WeatherState {
-  apiKey: string;
   isLoading: boolean;
   error: string | null;
   data: WeatherForecastResponse | null;
@@ -11,7 +10,6 @@ export interface WeatherState {
 export const weatherSlice = createSlice({
   name: 'weather',
   initialState: {
-    apiKey: '',
     isLoading: false,
     error: null,
     data: null,

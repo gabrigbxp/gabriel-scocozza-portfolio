@@ -24,6 +24,6 @@ export const renderWithProviders = (
 export const createPreloadedState = (overrides?: Partial<RootState>): RootState => ({
   locale: { current: 'en' as Locale },
   jsDos: { isFullscreen: false },
-  weather: { apiKey: '', isLoading: false, error: null, data: null },
+  weather: { isLoading: false, error: null, data: null },
   ...overrides,
 });

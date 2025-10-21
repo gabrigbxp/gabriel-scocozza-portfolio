@@ -244,14 +244,7 @@ export default {
   weather: {
     title: 'Weather',
     description:
-      'This component is a REST sample that allows you to fetch and display weather information using WeatherAPI.com.',
-    instructions: 'Just follow the instructions at',
-    documentation: 'Weatherapi documentation',
-    instructionsContinue: 'then enter your API key and choose a method to get the weather data.',
-    noteLabel: 'Note:',
-    noteText:
-      'I would like to include a ready-to-use API key, but even for demonstration purposes, it would be unsafe because GitHub Pages does not provide an environment variable system.',
-    apiKeyLabel: 'WeatherAPI Key',
+      'This component is a REST API implementation sample that allows fetching and displaying real-time weather information using WeatherAPI.com.',
     useGeolocation: 'Use geolocation',
     detectByIP: 'Detect by IP',
     loading: 'Loading...',

@@ -1,16 +1,14 @@
 import { useMemo, useState } from 'react';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { EXTERNAL_LINKS, WEATHER_CONFIG } from '@constants';
+import { WEATHER_CONFIG } from '@constants';
 import { useTranslation, useWeather } from '@hooks';
 import { useAppSelector } from '@hooks/useRedux';
 import type { WeatherForecastDay } from 'services/weather';
@@ -21,16 +19,14 @@ type TemperatureUnit = 'C' | 'F';
 const Weather = () => {
   const { t } = useTranslation();
   const locale = useAppSelector((state) => state.locale.current);
-  const [apiKey, setApiKey] = useState('');
   const [unit, setUnit] = useState<TemperatureUnit>(locale === 'es' ? 'C' : 'F');
-  const { fetchByCoords, fetchByIp, canQuery, isLoading, error, data } = useWeather(apiKey);
+  const { fetchByCoords, fetchByIp, isLoading, error, data } = useWeather();
 
   const days = useMemo(() => (data?.forecast?.forecastday ?? []).slice(0, WEATHER_CONFIG.forecastDays), [data]);
 
   const getTemp = (tempC: number, tempF: number) => Math.round(unit === 'C' ? tempC : tempF);
 
   const fetchWeather = async (useGeo: boolean) => {
-    if (!canQuery) return;
     if (useGeo && navigator.geolocation) {
       const pos = await new Promise<GeolocationPosition>((res, rej) => {
         navigator.geolocation.getCurrentPosition(res, rej, {
@@ -51,24 +47,8 @@ const Weather = () => {
       </Typography>
       <Typography variant="body2" gutterBottom>
         {t('weather.description')}
-        <br />
-        {t('weather.instructions')}{' '}
-        <Link href={EXTERNAL_LINKS.weatherApiDocs} target="_blank">
-          {t('weather.documentation')}
-        </Link>{' '}
-        {t('weather.instructionsContinue')}
-      </Typography>
-      <Typography variant="body2" sx={styles.noteBox}>
-        <strong>{t('weather.noteLabel')}</strong> {t('weather.noteText')}
       </Typography>
       <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} alignItems={{ xs: 'stretch', sm: 'center' }}>
-        <TextField
-          label={t('weather.apiKeyLabel')}
-          size="small"
-          value={apiKey}
-          onChange={(e) => setApiKey(e.target.value)}
-          fullWidth
-        />
         <ToggleButtonGroup
           value={unit}
           exclusive
@@ -91,7 +71,7 @@ const Weather = () => {
               whiteSpace: 'nowrap',
             }}
             variant="contained"
-            disabled={!canQuery || isLoading}
+            disabled={isLoading}
             onClick={() => fetchWeather(true)}
           >
             {t('weather.useGeolocation')}
@@ -101,7 +81,7 @@ const Weather = () => {
               whiteSpace: 'nowrap',
             }}
             variant="outlined"
-            disabled={!canQuery || isLoading}
+            disabled={isLoading}
             onClick={() => fetchWeather(false)}
           >
             {t('weather.detectByIP')}

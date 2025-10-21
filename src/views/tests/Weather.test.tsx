@@ -132,7 +132,6 @@ const preloadedStateMockedData = createPreloadedState({
   },
   weather: {
     isLoading: true,
-    apiKey: '',
     error: '',
     data: mockWeatherData,
   },
@@ -163,7 +162,7 @@ describe('Weather', () => {
       const section = container.querySelector('section#weather');
       expect(section).toBeInTheDocument();
       expect(screen.getByRole('heading', { name: /weather/i })).toBeInTheDocument();
-      expect(screen.getByText(/documentation/i)).toBeInTheDocument();
+      expect(screen.getByText(/real-time weather/i)).toBeInTheDocument();
     });
 
     it('should not display weather results when data is null', () => {
@@ -173,34 +172,12 @@ describe('Weather', () => {
   });
 
   describe('API', () => {
-    it('should enable buttons when API key is provided', async () => {
-      const user = userEvent.setup();
-      renderWithProviders(<Weather />, {
-        preloadedState: createPreloadedState(preloadedStateEn),
-      });
-
-      const geoButton = screen.getByRole('button', { name: /geolocation/i });
-      const ipButton = screen.getByRole('button', { name: /detect.*ip/i });
-
-      expect(geoButton).toBeDisabled();
-      expect(ipButton).toBeDisabled();
-
-      const apiKeyInput = 'test-api-key';
-      const input = screen.getByLabelText(/api key/i);
-      await user.type(input, apiKeyInput);
-
-      expect(input).toHaveValue(apiKeyInput);
-      expect(geoButton).toBeEnabled();
-      expect(ipButton).toBeEnabled();
-    });
-
     it('should display loading indicator and disabled buttons when fetching weather', () => {
       renderWithProviders(<Weather />, {
         preloadedState: {
           locale: { current: 'en' },
           weather: {
             isLoading: true,
-            apiKey: 'test-key',
             error: null,
             data: null,
           },
@@ -219,13 +196,12 @@ describe('Weather', () => {
 
   describe('error handling', () => {
     it('should display error message when fetch fails, with error severity', () => {
-      const errorMessage = 'API key is invalid';
+      const errorMessage = 'Failed to fetch weather data';
       const { container } = renderWithProviders(<Weather />, {
         preloadedState: {
           locale: { current: 'en' },
           weather: {
             isLoading: true,
-            apiKey: '',
             error: errorMessage,
             data: null,
           },
@@ -295,9 +271,6 @@ describe('Weather', () => {
         preloadedState: createPreloadedState(preloadedStateEn),
       });
 
-      const input = screen.getByLabelText(/api key/i);
-      await user.type(input, 'test-key');
-
       const geoButton = screen.getByRole('button', { name: /geolocation/i });
       await user.click(geoButton);
 
@@ -315,15 +288,6 @@ describe('Weather', () => {
 
       const section = container.querySelector('section#weather');
       expect(section).toBeInTheDocument();
-    });
-
-    it('should have accessible form labels', () => {
-      renderWithProviders(<Weather />, {
-        preloadedState: createPreloadedState(preloadedStateEn),
-      });
-
-      const input = screen.getByLabelText(/api key/i);
-      expect(input).toBeInTheDocument();
     });
 
     it('should have descriptive button text', () => {

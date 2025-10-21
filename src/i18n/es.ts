@@ -244,14 +244,7 @@ export default {
   weather: {
     title: 'Clima',
     description:
-      'Este componente es una muestra REST que permite obtener y mostrar información del clima usando WeatherAPI.com.',
-    instructions: 'Solo sigue las instrucciones en',
-    documentation: 'Documentación de Weatherapi',
-    instructionsContinue: 'luego ingresa tu clave API y elige un método para obtener los datos del clima.',
-    noteLabel: 'Nota:',
-    noteText:
-      'Me gustaría incluir una clave API lista para usar, pero incluso para propósitos de demostración, sería inseguro porque GitHub Pages no proporciona un sistema de variables de entorno.',
-    apiKeyLabel: 'Clave de WeatherAPI',
+      'Este componente es una muestra de implementación de API REST que permite obtener y mostrar información del clima en tiempo real usando WeatherAPI.com.',
     useGeolocation: 'Usar geolocalización',
     detectByIP: 'Detectar por IP',
     loading: 'Cargando...',

@@ -59,7 +59,13 @@ cd gabriel-scocozza-portfolio
 npm install
 ```
 
-3. Start the development server:
+3. Configure environment variables (optional but recommended):
+```bash
+cp .env.example .env.local
+```
+Then edit `.env.local`
+
+4. Start the development server:
 ```bash
 npm run dev
 ```

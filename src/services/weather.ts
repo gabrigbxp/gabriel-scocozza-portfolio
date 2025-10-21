@@ -58,6 +58,7 @@ export interface WeatherForecastResponse {
 }
 
 const BASE = 'https://api.weatherapi.com/v1';
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || '';
 
 const fetchJson = async <T>(url: string): Promise<T> => {
   const res = await fetch(url, { headers: { Accept: 'application/json' } });
@@ -74,19 +75,19 @@ const fetchJson = async <T>(url: string): Promise<T> => {
   return res.json() as Promise<T>;
 };
 
-const buildForecastUrl = (apiKey: string, q: string, days = 3, lang = 'en') => {
-  const p = new URLSearchParams({ key: apiKey, q, days: String(days), aqi: 'no', alerts: 'no', lang });
+const buildForecastUrl = (q: string, days = 3, lang = 'en') => {
+  const p = new URLSearchParams({ key: API_KEY, q, days: String(days), aqi: 'no', alerts: 'no', lang });
   return `${BASE}/forecast.json?${p.toString()}`;
 };
 
-const getForecastByQuery = async (apiKey: string, q: string, days = 3, lang = 'en') => {
-  return fetchJson<WeatherForecastResponse>(buildForecastUrl(apiKey, q, days, lang));
+const getForecastByQuery = async (q: string, days = 3, lang = 'en') => {
+  return fetchJson<WeatherForecastResponse>(buildForecastUrl(q, days, lang));
 };
 
-export const getForecastByCoords = async (apiKey: string, lat: number, lon: number, days = 3, lang = 'en') => {
-  return getForecastByQuery(apiKey, `${lat},${lon}`, days, lang);
+export const getForecastByCoords = async (lat: number, lon: number, days = 3, lang = 'en') => {
+  return getForecastByQuery(`${lat},${lon}`, days, lang);
 };
 
-export const getForecastAutoIp = async (apiKey: string, days = 3, lang = 'en') => {
-  return getForecastByQuery(apiKey, 'auto:ip', days, lang);
+export const getForecastAutoIp = async (days = 3, lang = 'en') => {
+  return getForecastByQuery('auto:ip', days, lang);
 };
