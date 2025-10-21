@@ -104,11 +104,7 @@ export default function Header() {
         <Container maxWidth="xl" sx={styles.container(trigger)}>
           <Toolbar disableGutters sx={styles.toolbar}>
             <Box sx={styles.logoContainer}>
-              <Avatar
-                alt={t('header.avatarAlt')}
-                src={me}
-                sx={styles.avatar}
-              />
+              <Avatar alt={t('header.avatarAlt')} src={me} sx={styles.avatar} />
               <Typography variant="h6" component="span">
                 {t('header.hi')}{' '}
                 <Typography variant="h6" component="span" sx={styles.logoTextBold}>

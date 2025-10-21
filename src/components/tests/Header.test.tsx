@@ -36,7 +36,7 @@ describe('Header', () => {
     });
 
     it('should render header with logo and title', () => {
-      expect(screen.getByText('Hi, I\'m')).toBeInTheDocument();
+      expect(screen.getByText("Hi, I'm")).toBeInTheDocument();
       expect(screen.getByText('Gabo')).toBeInTheDocument();
       expect(screen.getByAltText('Picture of Gabriel Gustavo Scocozza')).toBeInTheDocument();
     });

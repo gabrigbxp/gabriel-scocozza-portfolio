@@ -14,7 +14,7 @@ describe('iconMap', () => {
 
   it('should have icons for all stack items', () => {
     const missingIcons: string[] = [];
-    
+
     stack.forEach((item) => {
       if (!iconMap[item.icon]) {
         missingIcons.push(item.icon);
@@ -27,7 +27,7 @@ describe('iconMap', () => {
   it('should not have duplicate icon paths', () => {
     const paths = Object.values(iconMap);
     const uniquePaths = new Set(paths);
-    
+
     expect(paths.length).toBe(uniquePaths.size);
   });
 });

@@ -48,7 +48,7 @@
     "preview": "vite preview",
     "postinstall": "cpx \"node_modules/js-dos/dist/**/*\" public/js-dos",
     "lint": "eslint . --ext .ts,.tsx",
-    "format": "prettier --write .",
+    "format": "prettier --write src/**/*.{ts,tsx,json}",
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:watch": "vitest",

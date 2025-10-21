@@ -11,7 +11,12 @@ export default function LocaleToggle() {
 
   return (
     <Tooltip title={t(`header.toggleLanguage`)}>
-      <Button startIcon={<LanguageIcon fontSize="small" />} onClick={() => dispatch(toggleLocale())} size="small" color="inherit">
+      <Button
+        startIcon={<LanguageIcon fontSize="small" />}
+        onClick={() => dispatch(toggleLocale())}
+        size="small"
+        color="inherit"
+      >
         {locale === 'en' ? 'Español' : 'English'}
       </Button>
     </Tooltip>

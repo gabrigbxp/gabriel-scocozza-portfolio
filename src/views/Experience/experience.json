@@ -56,7 +56,24 @@
       "experience.jobs.southworks.responsibilities.4",
       "experience.jobs.southworks.responsibilities.5"
     ],
-    "technologies": ["C#", "ASP.NET Core", "Node.js", "React", "Azure Table Storage", "Azure Blob Storage", "Azure Active Directory", "Express", "MongoDB", "Android", "Java", "JavaScript", "Apache Cordova", "Ionic", "ES6", "TypeScript"]
+    "technologies": [
+      "C#",
+      "ASP.NET Core",
+      "Node.js",
+      "React",
+      "Azure Table Storage",
+      "Azure Blob Storage",
+      "Azure Active Directory",
+      "Express",
+      "MongoDB",
+      "Android",
+      "Java",
+      "JavaScript",
+      "Apache Cordova",
+      "Ionic",
+      "ES6",
+      "TypeScript"
+    ]
   },
   {
     "id": "servicios-computables",
@@ -113,10 +130,7 @@
       "start": "2016-06",
       "end": "2017-03"
     },
-    "responsibilities": [
-      "experience.jobs.sip.responsibilities.0",
-      "experience.jobs.sip.responsibilities.1"
-    ],
+    "responsibilities": ["experience.jobs.sip.responsibilities.0", "experience.jobs.sip.responsibilities.1"],
     "technologies": ["JavaScript", "PHP", "JSON", "jQuery", "XML", "HTML5", "MySQL", "Web Services"]
   },
   {
