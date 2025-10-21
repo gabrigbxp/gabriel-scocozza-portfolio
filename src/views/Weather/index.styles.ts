@@ -1,11 +1,6 @@
-export const noteBox = {
-  my: 2,
-  p: 2,
-  bgcolor: 'info.light',
-  borderRadius: 1,
-};
+export const controlsStack = { display: 'flex', flexDirection: 'row', gap: 1, flexWrap: 'wrap' };
 
-export const controlsStack = {
+export const loading = {
   mt: 2,
 };
 

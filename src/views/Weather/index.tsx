@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { type SelectChangeEvent } from '@mui/material/Select';
 import { WEATHER_CONFIG } from '@constants';
 import { useTranslation, useWeather } from '@hooks';
 import { useAppSelector } from '@hooks/useRedux';
@@ -48,47 +48,41 @@ const Weather = () => {
       <Typography variant="body2" gutterBottom>
         {t('weather.description')}
       </Typography>
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} alignItems={{ xs: 'stretch', sm: 'center' }}>
-        <ToggleButtonGroup
-          value={unit}
-          exclusive
-          onChange={(_e, newUnit) => {
-            if (newUnit !== null) setUnit(newUnit);
-          }}
-          size="small"
-          aria-label={t('weather.unit')}
-        >
-          <ToggleButton value="C" aria-label={t('weather.celsius')}>
-            {t('weather.celsius')}
-          </ToggleButton>
-          <ToggleButton value="F" aria-label={t('weather.fahrenheit')}>
-            {t('weather.fahrenheit')}
-          </ToggleButton>
-        </ToggleButtonGroup>
-        <Stack direction="row" spacing={1}>
-          <Button
-            sx={{
-              whiteSpace: 'nowrap',
-            }}
-            variant="contained"
-            disabled={isLoading}
-            onClick={() => fetchWeather(true)}
-          >
-            {t('weather.useGeolocation')}
-          </Button>
-          <Button
-            sx={{
-              whiteSpace: 'nowrap',
-            }}
-            variant="outlined"
-            disabled={isLoading}
-            onClick={() => fetchWeather(false)}
-          >
-            {t('weather.detectByIP')}
-          </Button>
-        </Stack>
-      </Stack>
       <Box sx={styles.controlsStack}>
+        <Select
+          value={unit}
+          label=""
+          onChange={(event: SelectChangeEvent) => {
+            setUnit(event.target.value as TemperatureUnit);
+          }}
+          aria-label={t('weather.unit')}
+          size="small"
+        >
+          <MenuItem value="C">{t('weather.celsius')}</MenuItem>
+          <MenuItem value="F">{t('weather.fahrenheit')}</MenuItem>
+        </Select>
+        <Button
+          sx={{
+            whiteSpace: 'nowrap',
+          }}
+          variant="contained"
+          disabled={isLoading}
+          onClick={() => fetchWeather(true)}
+        >
+          {t('weather.useGeolocation')}
+        </Button>
+        <Button
+          sx={{
+            whiteSpace: 'nowrap',
+          }}
+          variant="outlined"
+          disabled={isLoading}
+          onClick={() => fetchWeather(false)}
+        >
+          {t('weather.detectByIP')}
+        </Button>
+      </Box>
+      <Box sx={styles.loading}>
         {isLoading && (
           <Stack direction="row" spacing={1} alignItems="center">
             <CircularProgress size={20} />

@@ -47,7 +47,7 @@ const Contact = () => {
         <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem' }}>
           {t('contact.intro')}
         </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'row', gap: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
           {contactOptions.map((option) => (
             <Button
               key={option.label}
