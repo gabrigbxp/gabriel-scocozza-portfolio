@@ -1,0 +1,138 @@
+[
+  {
+    "id": "psh",
+    "company": "PSH",
+    "companyUrl": "https://wearepsh.com/",
+    "position": "experience.jobs.psh.position",
+    "location": "Buenos Aires, Argentina",
+    "internationalClient": "experience.jobs.psh.internationalClient",
+    "period": {
+      "start": "2023-09",
+      "end": "2025-10"
+    },
+    "responsibilities": [
+      "experience.jobs.psh.responsibilities.0",
+      "experience.jobs.psh.responsibilities.1",
+      "experience.jobs.psh.responsibilities.2",
+      "experience.jobs.psh.responsibilities.3",
+      "experience.jobs.psh.responsibilities.4"
+    ],
+    "technologies": ["React", "TypeScript", "NestJS", "MySQL", "PHP", "YAML"]
+  },
+  {
+    "id": "bairesdev",
+    "company": "BairesDev",
+    "companyUrl": "https://www.bairesdev.com/",
+    "position": "experience.jobs.bairesdev.position",
+    "location": "Buenos Aires, Argentina",
+    "internationalClient": "experience.jobs.bairesdev.internationalClient",
+    "period": {
+      "start": "2021-03",
+      "end": "2023-06"
+    },
+    "responsibilities": [
+      "experience.jobs.bairesdev.responsibilities.0",
+      "experience.jobs.bairesdev.responsibilities.1",
+      "experience.jobs.bairesdev.responsibilities.2"
+    ],
+    "technologies": ["React", "Ruby on Rails", "React on Rails", "Slim-Lang", "Next.js", "TypeScript"]
+  },
+  {
+    "id": "southworks",
+    "company": "Southworks S.A.",
+    "companyUrl": "https://www.southworks.com/",
+    "position": "experience.jobs.southworks.position",
+    "location": "Buenos Aires, Argentina",
+    "internationalClient": "experience.jobs.southworks.internationalClient",
+    "period": {
+      "start": "2020-03",
+      "end": "2021-03"
+    },
+    "responsibilities": [
+      "experience.jobs.southworks.responsibilities.0",
+      "experience.jobs.southworks.responsibilities.1",
+      "experience.jobs.southworks.responsibilities.2",
+      "experience.jobs.southworks.responsibilities.3",
+      "experience.jobs.southworks.responsibilities.4",
+      "experience.jobs.southworks.responsibilities.5"
+    ],
+    "technologies": ["C#", "ASP.NET Core", "Node.js", "React", "Azure Table Storage", "Azure Blob Storage", "Azure Active Directory", "Express", "MongoDB", "Android", "Java", "JavaScript", "Apache Cordova", "Ionic", "ES6", "TypeScript"]
+  },
+  {
+    "id": "servicios-computables",
+    "company": "Servicios Computables S.A.",
+    "companyUrl": "https://www.scmp.com.ar/",
+    "position": "experience.jobs.servicios-computables.position",
+    "location": "Buenos Aires, Argentina",
+    "period": {
+      "start": "2019-08",
+      "end": "2020-03"
+    },
+    "responsibilities": [
+      "experience.jobs.servicios-computables.responsibilities.0",
+      "experience.jobs.servicios-computables.responsibilities.1",
+      "experience.jobs.servicios-computables.responsibilities.2",
+      "experience.jobs.servicios-computables.responsibilities.3",
+      "experience.jobs.servicios-computables.responsibilities.4",
+      "experience.jobs.servicios-computables.responsibilities.5"
+    ],
+    "technologies": ["MySQL", "GitLab", "Git", "Laravel", "PHP", "USB Printer on LAN", "Java"]
+  },
+  {
+    "id": "gray-line",
+    "company": "Gray Line Argentina",
+    "companyUrl": "http://gl-tours.com/aerolineas/index.php",
+    "position": "experience.jobs.gray-line.position",
+    "location": "Buenos Aires, Argentina",
+    "period": {
+      "start": "2014-11",
+      "end": "2016-02"
+    },
+    "additionalPeriod": {
+      "start": "2017-03",
+      "end": "2019-08"
+    },
+    "responsibilities": [
+      "experience.jobs.gray-line.responsibilities.0",
+      "experience.jobs.gray-line.responsibilities.1",
+      "experience.jobs.gray-line.responsibilities.2",
+      "experience.jobs.gray-line.responsibilities.3",
+      "experience.jobs.gray-line.responsibilities.4",
+      "experience.jobs.gray-line.responsibilities.5",
+      "experience.jobs.gray-line.responsibilities.6"
+    ],
+    "technologies": ["JavaScript", "PHP", "JSON", "jQuery", "XML", "SVN", "HTML5", "MySQL", "Web Services"]
+  },
+  {
+    "id": "sip",
+    "company": "S.I.P. - Soluciones Informáticas Personalizadas",
+    "companyUrl": "https://www.sip.com.ar/",
+    "position": "experience.jobs.sip.position",
+    "location": "Buenos Aires, Argentina",
+    "period": {
+      "start": "2016-06",
+      "end": "2017-03"
+    },
+    "responsibilities": [
+      "experience.jobs.sip.responsibilities.0",
+      "experience.jobs.sip.responsibilities.1"
+    ],
+    "technologies": ["JavaScript", "PHP", "JSON", "jQuery", "XML", "HTML5", "MySQL", "Web Services"]
+  },
+  {
+    "id": "freelance",
+    "company": "Freelance Web Developer",
+    "companyUrl": null,
+    "position": "experience.jobs.freelance.position",
+    "location": "Buenos Aires, Argentina",
+    "period": {
+      "start": "2013-06",
+      "end": "2016-09"
+    },
+    "responsibilities": [
+      "experience.jobs.freelance.responsibilities.0",
+      "experience.jobs.freelance.responsibilities.1"
+    ],
+    "technologies": ["JavaScript", "PHP", "JSON", "jQuery", "XML", "HTML5", "MySQL", "Web Services"]
+  }
+]

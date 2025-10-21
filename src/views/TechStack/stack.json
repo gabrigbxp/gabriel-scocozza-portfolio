@@ -1,0 +1,453 @@
+[
+    {
+        "key": "javascript",
+        "name": "JavaScript",
+        "icon": "javascript",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "status": "active",
+        "years": 12,
+        "related": {
+            "versions": [
+                {
+                    "name": "ES6+"
+                },
+                {
+                    "name": "Node.js",
+                    "url": "https://nodejs.org/"
+                }
+            ],
+            "tools": [
+                {
+                    "name": "npm",
+                    "url": "https://www.npmjs.com/"
+                },
+                {
+                    "name": "Yarn",
+                    "url": "https://yarnpkg.com/"
+                },
+                {
+                    "name": "Webpack",
+                    "url": "https://webpack.js.org/"
+                },
+                {
+                    "name": "Vite",
+                    "url": "https://vitejs.dev/"
+                },
+                {
+                    "name": "Babel",
+                    "url": "https://babel.dev/"
+                }
+            ]
+        }
+    },
+    {
+        "key": "typescript",
+        "name": "TypeScript",
+        "icon": "typescript",
+        "url": "https://www.typescriptlang.org/",
+        "status": "active",
+        "years": 6,
+        "related": {
+            "tools": [
+                {
+                    "name": "TSC (TypeScript Compiler)"
+                }
+            ]
+        }
+    },
+    {
+        "key": "frontend",
+        "name": "Frontend Development",
+        "icon": "react",
+        "status": "active",
+        "years": 11,
+        "related": {
+            "libraries": [
+                {
+                    "name": "React",
+                    "url": "https://react.dev/"
+                },
+                {
+                    "name": "Material UI",
+                    "url": "https://mui.com/"
+                },
+                {
+                    "name": "Redux Toolkit",
+                    "url": "https://redux-toolkit.js.org/"
+                },
+                {
+                    "name": "TanStack Query",
+                    "url": "https://tanstack.com/query/latest"
+                }
+            ],
+            "frameworks": [
+                {
+                    "name": "Next.js",
+                    "url": "https://nextjs.org/"
+                }
+            ],
+            "styling": [
+                {
+                    "name": "CSS3"
+                },
+                {
+                    "name": "SCSS",
+                    "url": "https://sass-lang.com/"
+                },
+                {
+                    "name": "Bootstrap",
+                    "url": "https://getbootstrap.com/"
+                }
+            ],
+            "markup": [
+                {
+                    "name": "HTML5"
+                }
+            ]
+        }
+    },
+    {
+        "key": "backend",
+        "name": "Backend Development",
+        "icon": "nodejs",
+        "status": "active",
+        "years": 11,
+        "related": {
+            "runtime": [
+                {
+                    "name": "Node.js",
+                    "url": "https://nodejs.org/"
+                }
+            ],
+            "frameworks": [
+                {
+                    "name": "NestJS",
+                    "url": "https://nestjs.com/"
+                },
+                {
+                    "name": "Express",
+                    "url": "https://expressjs.com/"
+                }
+            ],
+            "concepts": [
+                {
+                    "name": "RESTful APIs"
+                },
+                {
+                    "name": "GraphQL",
+                    "url": "https://graphql.org/"
+                },
+                {
+                    "name": "Microservices Architecture"
+                }
+            ]
+        }
+    },
+    {
+        "key": "php",
+        "name": "PHP",
+        "icon": "php",
+        "url": "https://www.php.net/",
+        "status": "active",
+        "years": 12,
+        "related": {
+            "frameworks": [
+                {
+                    "name": "Laravel",
+                    "url": "https://laravel.com/"
+                },
+                {
+                    "name": "Symfony",
+                    "url": "https://symfony.com/"
+                }
+            ],
+            "tools": [
+                {
+                    "name": "Composer",
+                    "url": "https://getcomposer.org/"
+                }
+            ]
+        }
+    },
+    {
+        "key": "csharp",
+        "name": "C#",
+        "icon": "csharp",
+        "url": "https://dotnet.microsoft.com/languages/csharp",
+        "status": "past",
+        "years": 1,
+        "related": {
+            "frameworks": [
+                {
+                    "name": "ASP.NET Core",
+                    "url": "https://learn.microsoft.com/en-us/aspnet/core/"
+                }
+            ],
+            "cloud": [
+                {
+                    "name": "Azure Functions",
+                    "url": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+                },
+                {
+                    "name": "Azure Blob Storage",
+                    "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/"
+                },
+                {
+                    "name": "Azure Table Storage",
+                    "url": "https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview"
+                },
+                {
+                    "name": "Azure Active Directory",
+                    "url": "https://learn.microsoft.com/en-us/azure/active-directory/"
+                }
+            ]
+        }
+    },
+    {
+        "key": "java",
+        "name": "Java",
+        "icon": "java",
+        "url": "https://www.java.com/",
+        "status": "past",
+        "years": 1,
+        "related": {
+            "uses": [
+                {
+                    "name": "Print Middleware"
+                },
+                {
+                    "name": "Android Applications"
+                }
+            ]
+        }
+    },
+    {
+        "key": "ruby",
+        "name": "Ruby",
+        "icon": "ruby",
+        "url": "https://www.ruby-lang.org/",
+        "status": "past",
+        "years": 2,
+        "related": {
+            "frameworks": [
+                {
+                    "name": "Ruby on Rails",
+                    "url": "https://rubyonrails.org/"
+                },
+                {
+                    "name": "Slim Templates",
+                    "url": "https://slim-template.github.io/"
+                }
+            ]
+        }
+    },
+    {
+        "key": "databases",
+        "name": "Databases",
+        "icon": "database",
+        "status": "active",
+        "years": 12,
+        "related": {
+            "sql": [
+                {
+                    "name": "MySQL",
+                    "url": "https://www.mysql.com/"
+                }
+            ],
+            "noSql": [
+                {
+                    "name": "MongoDB",
+                    "url": "https://www.mongodb.com/"
+                }
+            ],
+            "cloud": [
+                {
+                    "name": "Azure Table Storage",
+                    "url": "https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview"
+                }
+            ]
+        }
+    },
+    {
+        "key": "testing",
+        "name": "Testing & Quality",
+        "icon": "testing",
+        "status": "active",
+        "years": 5,
+        "related": {
+            "e2e": [
+                {
+                    "name": "Cypress",
+                    "url": "https://www.cypress.io/"
+                }
+            ],
+            "unit": [
+                {
+                    "name": "Jest",
+                    "url": "https://jestjs.io/"
+                },
+                {
+                    "name": "Vitest",
+                    "url": "https://vitest.dev/"
+                }
+            ],
+            "quality": [
+                {
+                    "name": "ESLint",
+                    "url": "https://eslint.org/"
+                },
+                {
+                    "name": "Prettier",
+                    "url": "https://prettier.io/"
+                }
+            ]
+        }
+    },
+    {
+        "key": "cloudDevops",
+        "name": "Cloud & DevOps",
+        "icon": "azure",
+        "status": "active",
+        "years": 5,
+        "related": {
+            "cloud": [
+                {
+                    "name": "Microsoft Azure",
+                    "url": "https://azure.microsoft.com/"
+                },
+                {
+                    "name": "Azure Functions",
+                    "url": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+                },
+                {
+                    "name": "Azure Blob Storage",
+                    "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/"
+                },
+                {
+                    "name": "Azure Active Directory",
+                    "url": "https://learn.microsoft.com/en-us/azure/active-directory/"
+                }
+            ],
+            "containers": [
+                {
+                    "name": "Docker",
+                    "url": "https://www.docker.com/"
+                }
+            ],
+            "versionControl": [
+                {
+                    "name": "Git",
+                    "url": "https://git-scm.com/"
+                },
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/"
+                },
+                {
+                    "name": "GitLab",
+                    "url": "https://gitlab.com/"
+                }
+            ],
+            "certification": [
+                {
+                    "name": "Microsoft Azure Developer Associate (AZ-204)",
+                    "url": "/AZ-204.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "key": "methodologies",
+        "name": "Methodologies & Architecture",
+        "icon": "architecture",
+        "status": "active",
+        "years": 10,
+        "related": {
+            "agile": [
+                {
+                    "name": "Agile Methodologies"
+                },
+                {
+                    "name": "Scrum"
+                }
+            ],
+            "architecture": [
+                {
+                    "name": "Microservices Architecture"
+                },
+                {
+                    "name": "Microfrontends"
+                }
+            ],
+            "design": [
+                {
+                    "name": "Responsive Web Design"
+                },
+                {
+                    "name": "E-Commerce Solutions"
+                }
+            ]
+        }
+    },
+    {
+        "key": "others",
+        "name": "Other Technologies",
+        "icon": "miscellaneous",
+        "status": "active",
+        "related": {
+            "tools": [
+                {
+                    "name": "js-dos (just for this website!)",
+                    "url": "https://js-dos.com/"
+                },
+                {
+                    "name": "YAML",
+                    "url": "https://yaml.org/"
+                },
+                {
+                    "name": "jQuery",
+                    "url": "https://jquery.com/"
+                }
+            ]
+        }
+    },
+    {
+        "key": "continuousLearning",
+        "name": "Continuous Learning",
+        "icon": "learning",
+        "status": "active",
+        "related": {
+            "technical": [
+                {
+                    "name": "Advanced Testing Strategies"
+                },
+                {
+                    "name": "Architecture & Performance"
+                },
+                {
+                    "name": "DevOps & CI/CD"
+                },
+                {
+                    "name": "Automation"
+                }
+            ],
+            "softSkills": [
+                {
+                    "name": "Complex Problem Solving"
+                },
+                {
+                    "name": "Logical Thinking"
+                },
+                {
+                    "name": "Creativity"
+                },
+                {
+                    "name": "Teamwork"
+                },
+                {
+                    "name": "Agile Mindset"
+                }
+            ]
+        }
+    }
+]

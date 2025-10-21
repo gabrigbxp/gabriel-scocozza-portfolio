@@ -1,0 +1,109 @@
+{
+  "name": "gabriel-scocozza-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Personal portfolio website showcasing my experience as a Full-Stack Developer, featuring interactive DOS games, weather integration, and modern web technologies",
+  "keywords": [
+    "portfolio",
+    "react",
+    "typescript",
+    "vite",
+    "material-ui",
+    "mui",
+    "redux",
+    "full-stack",
+    "developer",
+    "personal-website",
+    "responsive-design",
+    "dos-games",
+    "js-dos",
+    "weather-api",
+    "internationalization",
+    "i18n",
+    "dark-mode",
+    "pwa",
+    "web-development",
+    "frontend",
+    "backend",
+    "software-engineer"
+  ],
+  "author": {
+    "name": "Gabriel Gustavo Scocozza",
+    "email": "scocozza.gabriel@gmail.com",
+    "url": "https://github.com/gabrigbxp"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrigbxp/gabriel-scocozza-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gabrigbxp/gabriel-scocozza-portfolio/issues"
+  },
+  "homepage": "https://github.com/gabrigbxp/gabriel-scocozza-portfolio#readme",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "postinstall": "cpx \"node_modules/js-dos/dist/**/*\" public/js-dos",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "cypress": "cypress open",
+    "test:e2e": "cypress run --browser chrome"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.2.8",
+    "@mui/icons-material": "^7.3.4",
+    "@mui/material": "^7.3.4",
+    "@reduxjs/toolkit": "^2.9.1",
+    "cpx2": "^8.0.0",
+    "js-dos": "^8.3.20",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^10.1.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "babel-plugin-react-compiler": "^19.1.0-rc.3",
+    "cypress": "^15.5.0",
+    "eslint": "^9.36.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.4.0",
+    "happy-dom": "^20.0.5",
+    "jsdom": "^27.0.1",
+    "lint-staged": "^15.0.0",
+    "not-airbnb-eslint-config": "^1.2.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
