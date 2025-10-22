@@ -55,7 +55,7 @@
     "test:coverage": "vitest run --coverage",
     "cypress": "cypress open",
     "test:e2e": "cypress run --browser chrome",
-    "predeploy": "npm run build"
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
