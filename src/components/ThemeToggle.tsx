@@ -9,10 +9,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { useState } from 'react';
 import { useColorScheme } from '@mui/material/styles';
+import { useTranslation } from '@hooks';
 
 export default function ThemeToggle() {
   const { mode, setMode, systemMode } = useColorScheme();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const { t } = useTranslation();
 
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -29,11 +31,11 @@ export default function ThemeToggle() {
 
   return (
     <>
-      <Tooltip title={`Theme: ${mode === 'system' ? `System (${systemMode})` : mode}`}>
+      <Tooltip title={t('header.changeTheme')}>
         <IconButton
           color="inherit"
           onClick={handleClick}
-          aria-label="Change theme"
+          aria-label={t('header.changeTheme')}
           aria-controls={open ? 'theme-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
@@ -52,19 +54,19 @@ export default function ThemeToggle() {
           <ListItemIcon>
             <SettingsBrightnessIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>System</ListItemText>
+          <ListItemText>{t('header.themeSystem')}</ListItemText>
         </MenuItem>
         <MenuItem onClick={() => handleSetMode('light')}>
           <ListItemIcon>
             <LightModeIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Light</ListItemText>
+          <ListItemText>{t('header.themeLight')}</ListItemText>
         </MenuItem>
         <MenuItem onClick={() => handleSetMode('dark')}>
           <ListItemIcon>
             <Brightness4Icon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Dark</ListItemText>
+          <ListItemText>{t('header.themeDark')}</ListItemText>
         </MenuItem>
       </Menu>
     </>

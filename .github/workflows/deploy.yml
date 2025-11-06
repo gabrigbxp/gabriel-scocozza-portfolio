@@ -32,15 +32,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Copy js-dos files
+        run: npm run postinstall
+
       - name: Build
         env:
           VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
         run: |
-          if [ -z "$VITE_WEATHER_API_KEY" ]; then
-            echo "Error: VITE_WEATHER_API_KEY is not set!"
-            exit 1
+          echo "Building project..."
+          if [ -n "$VITE_WEATHER_API_KEY" ]; then
+            echo "✓ Weather API key configured"
+          else
+            echo "ℹ Weather API key not set - weather functionality will be limited"
           fi
-          echo "Building with API key configured..."
           npm run build
 
       - name: Upload artifact

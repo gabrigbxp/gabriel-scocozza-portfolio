@@ -15,10 +15,10 @@ export default function useTranslation() {
 
   const translate = (key: TranslationKeys, params?: Record<string, string | number>): string => {
     const keys = key.split('.');
-    let value: any = t;
+    let value: unknown = t;
 
     for (const k of keys) {
-      value = value?.[k];
+      value = (value as Record<string, unknown>)[k];
       if (value === undefined) return key;
     }
 

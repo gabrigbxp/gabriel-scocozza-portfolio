@@ -11,6 +11,13 @@ export default {
     hi: 'Hola, soy',
     avatarAlt: 'Foto de Gabriel Gustavo Scocozza',
     toggleLanguage: 'Switch to English',
+    theme: 'Tema',
+    changeTheme: 'Cambiar tema',
+    themeSystem: 'Sistema',
+    themeLight: 'Claro',
+    themeDark: 'Oscuro',
+    spanish: 'Español',
+    english: 'English',
   },
   about: {
     title: 'Acerca de',

@@ -19,5 +19,4 @@ export type RootState = ReturnType<typeof reducer>;
 export type AppStore = ReturnType<typeof setupStore>;
 export type AppDispatch = AppStore['dispatch'];
 
-export const store = setupStore();
-export default store;
+export default setupStore();
