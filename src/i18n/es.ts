@@ -3,6 +3,7 @@ export default {
     about: 'Acerca de',
     techstack: 'Stack Tecnológico',
     experience: 'Experiencia',
+    projects: 'Proyectos',
     weather: 'Clima',
     games: 'Juegos',
     thisApp: 'Esta Aplicación',
@@ -246,6 +247,43 @@ export default {
           1: 'Integré Mercadopago y Todo Pago en http://trebo.com.ar',
         },
       },
+    },
+  },
+  projects: {
+    title: 'Proyectos Open Source',
+    intro: 'Algunos de mis proyectos personales de código abierto que mantengo y desarrollo activamente.',
+    viewOnGitHub: 'Ver en GitHub',
+    stars: 'estrellas',
+    npm: 'Ver en NPM',
+    techStackLabel: 'Stack Tecnológico',
+    featuresTitle: 'Características Principales',
+    libreqr: {
+      name: 'LibreQR',
+      description:
+        'Generador de QR privado y permanente, sin intermediarios ni rastreo. Los datos se codifican directo en el QR (sin short links), funciona offline y soporta Wi‑Fi, vCard, eventos, URLs, texto y geo.',
+      features: {
+        f0: 'Sin intermediarios: payload directo, sin short links, sin expiración',
+        f1: 'Funciona offline: todo ocurre en el cliente, sin tracking',
+        f2: 'Tipos de QR: Wi‑Fi, vCard (contacto), eventos, URLs, texto, geo',
+        f3: 'Personalización: colores y presets con interfaz responsiva',
+        f4: 'Exportar como PNG con opciones de corrección de error',
+      },
+      techStack: 'React + TypeScript, Material‑UI, Redux Toolkit, Electron (desktop), librería qrcode',
+    },
+    notAirbnbEslint: {
+      name: 'not-airbnb-eslint-config',
+      description:
+        'Config moderna para ESLint 9+ (Flat Config) para React + TypeScript con Prettier integrado. Cero configuración para empezar, personalizable y con todas las dependencias incluidas.',
+      features: {
+        f0: 'ESLint 9+ Flat Config con defaults modernos',
+        f1: 'Preparado para TypeScript con soporte completo',
+        f2: 'Incluye reglas para React, hooks y accesibilidad',
+        f3: 'Prettier integrado — sin conflictos',
+        f4: 'Cero configuración inicial, totalmente personalizable',
+        f5: 'Dependencias incluidas para evitar problemas de peer deps',
+      },
+      techStack: 'ESLint, TypeScript, Node.js',
+      npmDownloads: 'Descargas NPM',
     },
   },
   weather: {

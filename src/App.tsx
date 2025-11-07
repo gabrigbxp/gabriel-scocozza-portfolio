@@ -9,6 +9,7 @@ import { About, Contact } from './views';
 // Lazy load heavy components
 const TechStack = lazy(() => import('./views/TechStack'));
 const Experience = lazy(() => import('./views/Experience'));
+const Projects = lazy(() => import('./views/Projects'));
 const Weather = lazy(() => import('./views/Weather'));
 const Games = lazy(() => import('./views/Games'));
 const ThisApp = lazy(() => import('./views/ThisApp'));
@@ -33,6 +34,10 @@ const App = () => (
 
         <Suspense fallback={<SectionLoader />}>
           <Experience />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader />}>
+          <Projects />
         </Suspense>
 
         <Suspense fallback={<SectionLoader />}>

@@ -3,6 +3,7 @@ export default {
     about: 'About',
     techstack: 'TechStack',
     experience: 'Experience',
+    projects: 'Projects',
     weather: 'Weather',
     games: 'Games',
     thisApp: 'This App',
@@ -246,6 +247,43 @@ export default {
           1: 'Integrated Mercadopago and Todo Pago in http://trebo.com.ar',
         },
       },
+    },
+  },
+  projects: {
+    title: 'Open Source Projects',
+    intro: 'Some of my personal open source projects that I maintain and actively develop.',
+    viewOnGitHub: 'View on GitHub',
+    stars: 'stars',
+    npm: 'View on NPM',
+    featuresTitle: 'Key Features',
+    techStackLabel: 'Tech Stack',
+    libreqr: {
+      name: 'LibreQR',
+      description:
+        'A private, permanent QR generator with no intermediaries or tracking. Data is encoded directly in the QR (no short links), works offline, and supports Wi‑Fi, vCard, calendar, URLs, text, and geo.',
+      features: {
+        f0: 'No intermediaries: direct payload, no short links, no expiration',
+        f1: 'Works offline: client-side generation with zero tracking',
+        f2: 'QR types: Wi‑Fi, vCard (contact), calendar events, URLs, text, geo',
+        f3: 'Customization: colors and styling presets with responsive UI',
+        f4: 'Export as PNG with sensible defaults and error correction options',
+      },
+      techStack: 'React + TypeScript, Material‑UI, Redux Toolkit, Electron (desktop), qrcode library',
+    },
+    notAirbnbEslint: {
+      name: 'not-airbnb-eslint-config',
+      description:
+        'Modern ESLint 9+ Flat Config for React + TypeScript with Prettier integration. Zero-config to start, customizable, and includes all dependencies to avoid peer-dep hassles.',
+      features: {
+        f0: 'ESLint 9+ Flat Config with modern defaults',
+        f1: 'TypeScript-ready with first-class support',
+        f2: 'React, hooks, and a11y rules included',
+        f3: 'Prettier integrated — no conflicts',
+        f4: 'Zero-config to start, fully customizable later',
+        f5: 'All dependencies included to avoid peer dep pain',
+      },
+      techStack: 'ESLint, TypeScript, Node.js',
+      npmDownloads: 'NPM downloads',
     },
   },
   weather: {
