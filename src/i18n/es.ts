@@ -311,10 +311,35 @@ export default {
     supaplex: {
       description:
         'Supaplex es un videojuego creado por Philip Jespersen y Michael Stopp, y publicado por Digital Integration en 1991. Es un juego que recuerda a muchos jugadores a Pac-Man.',
+      modal: {
+        title: 'Supaplex',
+        howToPlay: 'Cómo jugar',
+        emulationNote: 'Esta emulación fue preparada por mí usando',
+        studio: 'js-dos studio',
+        instructions: {
+          navigate: 'Navega los menús con el mouse; inicia el nivel seleccionado con OK o la barra espaciadora.',
+          objective: 'Come suficientes "infotrons"',
+          objectiveContinued: 'para completar el nivel y alcanzar la salida',
+          movement:
+            'Usa las flechas del teclado para moverte. Presiona Espacio para comer sin moverte o colocar disquetes bomba.',
+        },
+      },
     },
     doom: {
       description:
         'DooM es un juego de disparos en primera persona de 1993 desarrollado y publicado por id Software para MS-DOS. Si bien no fue el primer juego de disparos en primera persona, Doom fue el título que marcó un punto de inflexión en el género, estableciendo nuevos estándares e influyendo en innumerables juegos que siguieron.',
+      modal: {
+        title: 'DooM (1993)',
+        howToPlay: 'Cómo jugar',
+        emulationNote: 'Esta emulación es la misma que',
+        dosZone: 'DOS Zone',
+        optimized: '. Está optimizada para proporcionar una experiencia moderna.',
+        instructions: {
+          move: 'WASD para moverse',
+          shoot: 'Clic izquierdo para disparar',
+          doors: 'Espacio o doble clic derecho para abrir puertas',
+        },
+      },
     },
     achievement: {
       title: '¿Cómo se logró?',
