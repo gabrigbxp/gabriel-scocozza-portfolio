@@ -1,6 +1,6 @@
 export const EXTERNAL_LINKS = {
   email: 'mailto:scocozza.gabriel@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/gsocozza/',
+  linkedin: 'https://www.linkedin.com/in/gscocozza/',
   github: 'https://github.com/gabrigbxp',
   ghportfolio: 'https://github.com/gabrigbxp/gabriel-scocozza-portfolio',
   weatherApiDocs: 'https://www.weatherapi.com/docs/',
