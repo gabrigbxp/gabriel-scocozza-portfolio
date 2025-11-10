@@ -1,4 +1,4 @@
-import type { Theme } from '@mui/material/styles';
+import type { Theme } from '@mui/material/styles'
 
 export const modal = (theme: Theme) => ({
   bgcolor: 'background.paper',
@@ -18,9 +18,9 @@ export const modal = (theme: Theme) => ({
     maxWidth: 'none',
     maxHeight: 'none',
   },
-});
+})
 
 export const modalFullscreen = {
   maxWidth: 'none',
   maxHeight: 'none',
-};
+}

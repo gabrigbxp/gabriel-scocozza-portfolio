@@ -1,4 +1,4 @@
-import type { Theme } from '@mui/material/styles';
+import type { Theme } from '@mui/material/styles'
 
 export const container = (theme: Theme) => ({
   width: { xs: 1, md: `calc(50% - ${theme.spacing(1)})` },
@@ -8,7 +8,7 @@ export const container = (theme: Theme) => ({
   gap: 1,
   alignItems: 'center',
   p: 2,
-});
+})
 
 export const imageWrapper = (theme: Theme) => ({
   cursor: 'pointer',
@@ -24,7 +24,7 @@ export const imageWrapper = (theme: Theme) => ({
     color: theme.palette.success.light,
     transform: 'translate(-50%, -50%) scale(1.1)',
   },
-});
+})
 
 export const playIconBox = (theme: Theme) => ({
   color: theme.palette.error.light,
@@ -35,8 +35,8 @@ export const playIconBox = (theme: Theme) => ({
   transform: 'translate(-50%, -50%)',
   transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
   zIndex: 2,
-});
+})
 
 export const playIcon = {
   fontSize: 80,
-};
+}

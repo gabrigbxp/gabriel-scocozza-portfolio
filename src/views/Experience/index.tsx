@@ -1,48 +1,48 @@
-import { Box, Typography, Chip, Stack, Link } from '@mui/material';
-import WorkIcon from '@mui/icons-material/Work';
-import BusinessIcon from '@mui/icons-material/Business';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import PublicIcon from '@mui/icons-material/Public';
-import { useTranslation } from '@hooks';
-import experienceData from './experience.json';
+import { Box, Typography, Chip, Stack, Link } from '@mui/material'
+import WorkIcon from '@mui/icons-material/Work'
+import BusinessIcon from '@mui/icons-material/Business'
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
+import PublicIcon from '@mui/icons-material/Public'
+import { useTranslation } from '@hooks'
+import experienceData from './experience.json'
 
 const Experience = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const formatPeriod = (start: string, end: string) => {
-    const [year, month] = start.split('-').map(Number);
-    const startDate = new Date(year, month - 1);
-    const startMonth = startDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
+    const [year, month] = start.split('-').map(Number)
+    const startDate = new Date(year, month - 1)
+    const startMonth = startDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' })
 
     if (end === 'present') {
-      return `${startMonth} - ${t('experience.present')}`;
+      return `${startMonth} - ${t('experience.present')}`
     }
 
-    const [endYear, endMonth] = end.split('-').map(Number);
-    const endDate = new Date(endYear, endMonth - 1);
-    const endMonthStr = endDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
-    return `${startMonth} - ${endMonthStr}`;
-  };
+    const [endYear, endMonth] = end.split('-').map(Number)
+    const endDate = new Date(endYear, endMonth - 1)
+    const endMonthStr = endDate.toLocaleDateString(undefined, { month: 'short', year: 'numeric' })
+    return `${startMonth} - ${endMonthStr}`
+  }
 
   const calculateDuration = (start: string, end: string) => {
-    const startDate = new Date(start);
-    const endDate = end === 'present' ? new Date() : new Date(end);
+    const startDate = new Date(start)
+    const endDate = end === 'present' ? new Date() : new Date(end)
 
-    const months = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
+    const months = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth())
 
-    const years = Math.floor(months / 12);
-    const remainingMonths = months % 12;
+    const years = Math.floor(months / 12)
+    const remainingMonths = months % 12
 
     if (years > 0 && remainingMonths > 0) {
-      return `${years} ${years === 1 ? t('experience.year') : t('experience.years')} ${remainingMonths} ${remainingMonths === 1 ? t('experience.month') : t('experience.months')}`;
+      return `${years} ${years === 1 ? t('experience.year') : t('experience.years')} ${remainingMonths} ${remainingMonths === 1 ? t('experience.month') : t('experience.months')}`
     }
 
     if (years > 0) {
-      return `${years} ${years === 1 ? t('experience.year') : t('experience.years')}`;
+      return `${years} ${years === 1 ? t('experience.year') : t('experience.years')}`
     }
 
-    return `${remainingMonths} ${remainingMonths === 1 ? t('experience.month') : t('experience.months')}`;
-  };
+    return `${remainingMonths} ${remainingMonths === 1 ? t('experience.month') : t('experience.months')}`
+  }
 
   return (
     <Box component="section" id="experience" sx={{ py: 4 }}>
@@ -151,7 +151,7 @@ const Experience = () => {
         ))}
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

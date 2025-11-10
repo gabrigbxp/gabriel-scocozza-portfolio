@@ -1,40 +1,40 @@
-import { useState, useEffect, useRef } from 'react';
-import Box from '@mui/material/Box';
-import { useKonamiCode } from '@hooks/useKonamiCode';
+import { useState, useEffect, useRef } from 'react'
+import Box from '@mui/material/Box'
+import { useKonamiCode } from '@hooks/useKonamiCode'
 
 const EasterEgg = () => {
-  const [showToasty, setShowToasty] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [showToasty, setShowToasty] = useState(false)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    audioRef.current = new Audio(`${import.meta.env.BASE_URL}toasty.m4a`);
-    audioRef.current.load();
+    audioRef.current = new Audio(`${import.meta.env.BASE_URL}toasty.m4a`)
+    audioRef.current.load()
 
-    const img = new Image();
-    img.src = `${import.meta.env.BASE_URL}toasty.png`;
+    const img = new Image()
+    img.src = `${import.meta.env.BASE_URL}toasty.png`
 
     return () => {
       if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
+        audioRef.current.pause()
+        audioRef.current = null
       }
-    };
-  }, []);
+    }
+  }, [])
 
   useKonamiCode(() => {
     if (audioRef.current) {
-      audioRef.current.currentTime = 0;
+      audioRef.current.currentTime = 0
       audioRef.current.play().catch(() => {
         // eslint-disable-next-line no-console
-        console.error('Failed to play Easter Egg audio');
-      });
+        console.error('Failed to play Easter Egg audio')
+      })
     }
 
-    setShowToasty(true);
+    setShowToasty(true)
     setTimeout(() => {
-      setShowToasty(false);
-    }, 800);
-  });
+      setShowToasty(false)
+    }, 800)
+  })
 
   return (
     <Box
@@ -52,7 +52,7 @@ const EasterEgg = () => {
         pointerEvents: 'none',
       }}
     />
-  );
-};
+  )
+}
 
-export default EasterEgg;
+export default EasterEgg

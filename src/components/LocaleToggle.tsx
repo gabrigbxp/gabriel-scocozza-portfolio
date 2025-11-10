@@ -1,13 +1,13 @@
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import LanguageIcon from '@mui/icons-material/Language';
-import { useAppDispatch, useAppSelector, useTranslation } from '@hooks';
-import { toggleLocale } from '@store/locale';
+import Button from '@mui/material/Button'
+import Tooltip from '@mui/material/Tooltip'
+import LanguageIcon from '@mui/icons-material/Language'
+import { useAppDispatch, useAppSelector, useTranslation } from '@hooks'
+import { toggleLocale } from '@store/locale'
 
-export default function LocaleToggle() {
-  const dispatch = useAppDispatch();
-  const { t } = useTranslation();
-  const locale = useAppSelector((state) => state.locale.current);
+const LocaleToggle = () => {
+  const dispatch = useAppDispatch()
+  const { t } = useTranslation()
+  const locale = useAppSelector((state) => state.locale.current)
 
   return (
     <Tooltip title={t(`header.toggleLanguage`)}>
@@ -20,5 +20,7 @@ export default function LocaleToggle() {
         {locale === 'en' ? 'Español' : 'English'}
       </Button>
     </Tooltip>
-  );
+  )
 }
+
+export default LocaleToggle

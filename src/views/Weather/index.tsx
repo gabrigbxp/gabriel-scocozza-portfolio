@@ -1,30 +1,30 @@
-import { useMemo, useState } from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import CircularProgress from '@mui/material/CircularProgress';
-import Alert from '@mui/material/Alert';
-import MenuItem from '@mui/material/MenuItem';
-import Select, { type SelectChangeEvent } from '@mui/material/Select';
-import { WEATHER_CONFIG } from '@constants';
-import { useTranslation, useWeather } from '@hooks';
-import { useAppSelector } from '@hooks/useRedux';
-import type { WeatherForecastDay } from 'services/weather';
-import * as styles from './index.styles';
+import { useMemo, useState } from 'react'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import Divider from '@mui/material/Divider'
+import CircularProgress from '@mui/material/CircularProgress'
+import Alert from '@mui/material/Alert'
+import MenuItem from '@mui/material/MenuItem'
+import Select, { type SelectChangeEvent } from '@mui/material/Select'
+import { WEATHER_CONFIG } from '@constants'
+import { useTranslation, useWeather } from '@hooks'
+import { useAppSelector } from '@hooks/useRedux'
+import type { WeatherForecastDay } from 'services/weather'
+import * as styles from './index.styles'
 
-type TemperatureUnit = 'C' | 'F';
+type TemperatureUnit = 'C' | 'F'
 
 const Weather = () => {
-  const { t } = useTranslation();
-  const locale = useAppSelector((state) => state.locale.current);
-  const [unit, setUnit] = useState<TemperatureUnit>(locale === 'es' ? 'C' : 'F');
-  const { fetchByCoords, fetchByIp, isLoading, error, data } = useWeather();
+  const { t } = useTranslation()
+  const locale = useAppSelector((state) => state.locale.current)
+  const [unit, setUnit] = useState<TemperatureUnit>(locale === 'es' ? 'C' : 'F')
+  const { fetchByCoords, fetchByIp, isLoading, error, data } = useWeather()
 
-  const days = useMemo(() => (data?.forecast?.forecastday ?? []).slice(0, WEATHER_CONFIG.forecastDays), [data]);
+  const days = useMemo(() => (data?.forecast?.forecastday ?? []).slice(0, WEATHER_CONFIG.forecastDays), [data])
 
-  const getTemp = (tempC: number, tempF: number) => Math.round(unit === 'C' ? tempC : tempF);
+  const getTemp = (tempC: number, tempF: number) => Math.round(unit === 'C' ? tempC : tempF)
 
   const fetchWeather = async (useGeo: boolean) => {
     if (useGeo && navigator.geolocation) {
@@ -32,13 +32,13 @@ const Weather = () => {
         navigator.geolocation.getCurrentPosition(res, rej, {
           enableHighAccuracy: WEATHER_CONFIG.geolocationHighAccuracy,
           timeout: WEATHER_CONFIG.geolocationTimeout,
-        });
-      });
-      fetchByCoords(pos.coords.latitude, pos.coords.longitude, WEATHER_CONFIG.forecastDays);
+        })
+      })
+      fetchByCoords(pos.coords.latitude, pos.coords.longitude, WEATHER_CONFIG.forecastDays)
     } else {
-      fetchByIp(WEATHER_CONFIG.forecastDays);
+      fetchByIp(WEATHER_CONFIG.forecastDays)
     }
-  };
+  }
 
   return (
     <Box id="weather" component="section">
@@ -53,7 +53,7 @@ const Weather = () => {
           value={unit}
           label=""
           onChange={(event: SelectChangeEvent) => {
-            setUnit(event.target.value as TemperatureUnit);
+            setUnit(event.target.value as TemperatureUnit)
           }}
           aria-label={t('weather.unit')}
           size="small"
@@ -129,7 +129,7 @@ const Weather = () => {
         </Box>
       )}
     </Box>
-  );
-};
+  )
+}
 
-export default Weather;
+export default Weather

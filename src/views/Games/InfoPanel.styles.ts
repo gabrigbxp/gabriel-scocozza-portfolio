@@ -1,4 +1,4 @@
-import type { Theme } from '@mui/material/styles';
+import type { Theme } from '@mui/material/styles'
 
 export const paper = {
   position: 'relative',
@@ -6,12 +6,12 @@ export const paper = {
   borderRadius: 2,
   bgcolor: 'background.default',
   borderColor: 'divider',
-};
+}
 
 export const paperCollapsed = {
   bgcolor: 'transparent',
   borderColor: 'transparent',
-};
+}
 
 export const toggleButton = (theme: Theme) => ({
   position: 'absolute',
@@ -19,12 +19,12 @@ export const toggleButton = (theme: Theme) => ({
   right: theme.spacing(2),
   cursor: 'pointer',
   zIndex: 1,
-});
+})
 
 export const header = {
   fontWeight: 600,
-};
+}
 
 export const content = {
   mt: 1,
-};
+}

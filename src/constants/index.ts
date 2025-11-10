@@ -1,2 +1,2 @@
-export * from './config';
-export * from './external-links';
+export * from './config'
+export * from './external-links'

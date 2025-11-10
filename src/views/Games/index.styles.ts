@@ -5,4 +5,4 @@ export const gamesList = {
   justifyContent: 'space-between',
   alignItems: 'stretch',
   gap: 2,
-};
+}

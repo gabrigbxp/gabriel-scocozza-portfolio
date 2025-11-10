@@ -1,4 +1,4 @@
-import type { Theme } from '@mui/material/styles';
+import type { Theme } from '@mui/material/styles'
 
 export const modal = {
   position: 'absolute',
@@ -13,26 +13,26 @@ export const modal = {
   boxShadow: 24,
   p: 4,
   outline: 'none',
-};
+}
 
 export const header = {
   mb: 3,
   pb: 2,
   borderBottom: '2px solid',
   borderColor: 'primary.main',
-};
+}
 
 export const content = {
   display: 'flex',
   flexDirection: 'column',
   gap: 2,
-};
+}
 
 export const section = {
   display: 'flex',
   flexDirection: 'column',
   gap: 1,
-};
+}
 
 export const codeBlock = [
   {
@@ -51,11 +51,11 @@ export const codeBlock = [
       bgcolor: 'grey.900',
       color: 'grey.100',
     }),
-];
+]
 
 export const featureList = {
   pl: 3,
   '& li': {
     mb: 1,
   },
-};
+}

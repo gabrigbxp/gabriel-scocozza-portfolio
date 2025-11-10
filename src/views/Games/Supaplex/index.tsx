@@ -1,13 +1,13 @@
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import { GameModal, DosPlayer } from '@components';
-import supaplexUrl from '@assets/games/supaplex.jsdos?url';
-import * as styles from '../GameLayout.styles';
-import InfoPanel from '../InfoPanel';
-import infotron from './infotron.png';
-import exit from './exit.png';
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
+import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
+import { GameModal, DosPlayer } from '@components'
+import supaplexUrl from '@assets/games/supaplex.jsdos?url'
+import * as styles from '../GameLayout.styles'
+import InfoPanel from '../InfoPanel'
+import infotron from './infotron.png'
+import exit from './exit.png'
 
 const SupaplexGame = (props: { isOpen: boolean; onClose: () => void }) => (
   <GameModal isOpen={props.isOpen} onClose={props.onClose}>
@@ -43,6 +43,6 @@ const SupaplexGame = (props: { isOpen: boolean; onClose: () => void }) => (
       </Box>
     </Box>
   </GameModal>
-);
+)
 
-export default SupaplexGame;
+export default SupaplexGame

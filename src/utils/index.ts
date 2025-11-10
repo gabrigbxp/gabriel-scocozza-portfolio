@@ -1,2 +1,2 @@
-export { default as iconMap } from './iconMap';
-export { getMuiSpacingPx } from './muiSpacing';
+export { default as iconMap } from './iconMap'
+export { getMuiSpacingPx } from './muiSpacing'

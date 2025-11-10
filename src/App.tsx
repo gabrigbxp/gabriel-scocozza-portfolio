@@ -1,25 +1,25 @@
-import { lazy, Suspense } from 'react';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-import { Header, Footer, EasterEgg } from './components';
-import { About, Contact } from './views';
+import { lazy, Suspense } from 'react'
+import Container from '@mui/material/Container'
+import Stack from '@mui/material/Stack'
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
+import { Header, Footer, EasterEgg } from './components'
+import { About, Contact } from './views'
 
 // Lazy load heavy components
-const TechStack = lazy(() => import('./views/TechStack'));
-const Experience = lazy(() => import('./views/Experience'));
-const Projects = lazy(() => import('./views/Projects'));
-const Weather = lazy(() => import('./views/Weather'));
-const Games = lazy(() => import('./views/Games'));
-const ThisApp = lazy(() => import('./views/ThisApp'));
+const TechStack = lazy(() => import('./views/TechStack'))
+const Experience = lazy(() => import('./views/Experience'))
+const Projects = lazy(() => import('./views/Projects'))
+const Weather = lazy(() => import('./views/Weather'))
+const Games = lazy(() => import('./views/Games'))
+const ThisApp = lazy(() => import('./views/ThisApp'))
 
 // Loading component
 const SectionLoader = () => (
   <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
     <CircularProgress />
   </Box>
-);
+)
 
 const App = () => (
   <>
@@ -57,6 +57,6 @@ const App = () => (
     </Container>
     <Footer />
   </>
-);
+)
 
-export default App;
+export default App

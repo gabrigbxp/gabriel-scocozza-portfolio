@@ -1,22 +1,22 @@
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import CodeIcon from '@mui/icons-material/Code';
-import LanguageIcon from '@mui/icons-material/Language';
-import SecurityIcon from '@mui/icons-material/Security';
-import { useTranslation } from '@hooks';
-import * as styles from './index.styles';
+import Modal from '@mui/material/Modal'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
+import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close'
+import CodeIcon from '@mui/icons-material/Code'
+import LanguageIcon from '@mui/icons-material/Language'
+import SecurityIcon from '@mui/icons-material/Security'
+import { useTranslation } from '@hooks'
+import * as styles from './index.styles'
 
 interface HowWasAchivedGamesProps {
-  onClose: () => void;
-  isOpen: boolean;
+  onClose: () => void
+  isOpen: boolean
 }
 
 const HowWasAchivedGames = ({ isOpen, onClose }: HowWasAchivedGamesProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <Modal open={isOpen} onClose={onClose} data-testid="achievement-modal">
@@ -96,7 +96,7 @@ const HowWasAchivedGames = ({ isOpen, onClose }: HowWasAchivedGamesProps) => {
         </Box>
       </Box>
     </Modal>
-  );
-};
+  )
+}
 
-export default HowWasAchivedGames;
+export default HowWasAchivedGames

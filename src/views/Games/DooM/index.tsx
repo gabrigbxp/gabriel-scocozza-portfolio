@@ -1,11 +1,11 @@
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import { GameModal, DosPlayer } from '@components';
-import doomUrl from '@assets/games/doom.jsdos?url';
-import * as styles from '../GameLayout.styles';
-import InfoPanel from '../InfoPanel';
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
+import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
+import { GameModal, DosPlayer } from '@components'
+import doomUrl from '@assets/games/doom.jsdos?url'
+import * as styles from '../GameLayout.styles'
+import InfoPanel from '../InfoPanel'
 
 const DooMGame = (props: { isOpen: boolean; onClose: () => void }) => (
   <GameModal isOpen={props.isOpen} onClose={props.onClose}>
@@ -34,6 +34,6 @@ const DooMGame = (props: { isOpen: boolean; onClose: () => void }) => (
       </Box>
     </Box>
   </GameModal>
-);
+)
 
-export default DooMGame;
+export default DooMGame

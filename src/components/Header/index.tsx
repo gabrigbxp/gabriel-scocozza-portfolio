@@ -1,94 +1,94 @@
-import AppBar from '@mui/material/AppBar';
-import Avatar from '@mui/material/Avatar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import { useColorScheme } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import MenuIcon from '@mui/icons-material/Menu';
-import DownloadIcon from '@mui/icons-material/Download';
-import { useEffect, useState } from 'react';
-import { useTranslation } from '@hooks';
-import { HEADER_CONFIG, SCROLL_OFFSET, SECTIONS } from '@constants';
-import me from '@assets/profile/me.jpg';
-import LocaleToggle from '../LocaleToggle';
-import ThemeToggle from '../ThemeToggle';
-import * as styles from './indes.styles';
+import AppBar from '@mui/material/AppBar'
+import Avatar from '@mui/material/Avatar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
+import { useColorScheme } from '@mui/material/styles'
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
+import IconButton from '@mui/material/IconButton'
+import Drawer from '@mui/material/Drawer'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+import Divider from '@mui/material/Divider'
+import MenuIcon from '@mui/icons-material/Menu'
+import DownloadIcon from '@mui/icons-material/Download'
+import { useEffect, useState } from 'react'
+import { useTranslation } from '@hooks'
+import { HEADER_CONFIG, SCROLL_OFFSET, SECTIONS } from '@constants'
+import me from '@assets/profile/me.jpg'
+import LocaleToggle from '../LocaleToggle'
+import ThemeToggle from '../ThemeToggle'
+import * as styles from './indes.styles'
 
-export default function Header() {
-  const [trigger, setTrigger] = useState(false);
-  const [active, setActive] = useState<string>();
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const { mode, systemMode } = useColorScheme();
-  const { t } = useTranslation();
+const Header = () => {
+  const [trigger, setTrigger] = useState(false)
+  const [active, setActive] = useState<string>()
+  const [drawerOpen, setDrawerOpen] = useState(false)
+  const { mode, systemMode } = useColorScheme()
+  const { t } = useTranslation()
 
   useEffect(() => {
-    let timeoutId: number | undefined;
-    const HYSTERESIS = 40; // threshold zone to prevent flickering
+    let timeoutId: number | undefined
+    const HYSTERESIS = 40 // threshold zone to prevent flickering
 
     const handleScroll = () => {
-      const { scrollY } = window;
-      const threshold = HEADER_CONFIG.scrollTriggerThreshold;
+      const { scrollY } = window
+      const threshold = HEADER_CONFIG.scrollTriggerThreshold
 
       if (trigger) {
         if (scrollY < threshold - HYSTERESIS) {
-          setTrigger(false);
+          setTrigger(false)
         }
       } else {
         if (scrollY > threshold + HYSTERESIS) {
-          setTrigger(true);
+          setTrigger(true)
         }
       }
-    };
+    }
 
-    handleScroll();
+    handleScroll()
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll)
       if (timeoutId) {
-        clearTimeout(timeoutId);
+        clearTimeout(timeoutId)
       }
-    };
-  }, [trigger]);
+    }
+  }, [trigger])
 
   const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
+    const el = document.getElementById(id)
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
-      window.scrollTo({ top, behavior: 'smooth' });
+      const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET
+      window.scrollTo({ top, behavior: 'smooth' })
     }
-    setDrawerOpen(false);
-  };
+    setDrawerOpen(false)
+  }
 
   useEffect(() => {
     const handler = () => {
-      let current: string = SECTIONS[0].id;
+      let current: string = SECTIONS[0].id
       for (const { id } of SECTIONS) {
-        const el = document.getElementById(id);
+        const el = document.getElementById(id)
         if (el) {
-          const rect = el.getBoundingClientRect();
+          const rect = el.getBoundingClientRect()
           if (rect.top <= HEADER_CONFIG.activeDetectionOffset && rect.bottom >= HEADER_CONFIG.activeDetectionOffset) {
-            current = id;
-            break;
+            current = id
+            break
           }
         }
       }
-      setActive(current);
-    };
-    handler();
-    window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
-  }, []);
+      setActive(current)
+    }
+    handler()
+    window.addEventListener('scroll', handler, { passive: true })
+    return () => window.removeEventListener('scroll', handler)
+  }, [])
 
   return (
     <>
@@ -176,5 +176,7 @@ export default function Header() {
         </Box>
       </Drawer>
     </>
-  );
+  )
 }
+
+export default Header

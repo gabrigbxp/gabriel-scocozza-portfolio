@@ -146,7 +146,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Gabriel Gustavo Scocozza**
 
 - Email: [scocozza.gabriel@gmail.com](mailto:scocozza.gabriel@gmail.com)
-- LinkedIn: [gabrielscocozza](https://www.linkedin.com/in/gabrielscocozza/)
+- LinkedIn: [gsocozza](https://www.linkedin.com/in/gsocozza/)
 - GitHub: [@gabrigbxp](https://github.com/gabrigbxp)
 
 ## 🙏 Acknowledgments

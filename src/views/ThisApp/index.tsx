@@ -1,16 +1,16 @@
-import { Box, Typography, Paper, Stack, Link } from '@mui/material';
-import { useTranslation } from '@hooks';
+import { Box, Typography, Paper, Stack, Link } from '@mui/material'
+import { useTranslation } from '@hooks'
 
 const count = (() => {
-  let counter = 0;
+  let counter = 0
   return () => {
-    counter += 1;
-    return counter;
-  };
-})();
+    counter += 1
+    return counter
+  }
+})()
 
 const ThisApp = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const sections = [
     {
@@ -47,7 +47,7 @@ const ThisApp = () => {
       title: t('thisApp.jsDos.title'),
       content: t('thisApp.jsDos.content'),
     },
-  ];
+  ]
 
   return (
     <Box id="this-app" component="section">
@@ -87,7 +87,7 @@ const ThisApp = () => {
         ))}
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default ThisApp;
+export default ThisApp

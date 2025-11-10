@@ -1,26 +1,26 @@
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import Chip from '@mui/material/Chip';
-import Paper from '@mui/material/Paper';
-import CodeIcon from '@mui/icons-material/Code';
-import WorkIcon from '@mui/icons-material/Work';
-import SchoolIcon from '@mui/icons-material/School';
-import LanguageIcon from '@mui/icons-material/Language';
-import { useTranslation } from '@hooks';
-import * as styles from './index.styles';
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Stack from '@mui/material/Stack'
+import Chip from '@mui/material/Chip'
+import Paper from '@mui/material/Paper'
+import CodeIcon from '@mui/icons-material/Code'
+import WorkIcon from '@mui/icons-material/Work'
+import SchoolIcon from '@mui/icons-material/School'
+import LanguageIcon from '@mui/icons-material/Language'
+import { useTranslation } from '@hooks'
+import * as styles from './index.styles'
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const highlights = [
     { icon: <CodeIcon />, label: 'about.highlights.experience' as const },
     { icon: <WorkIcon />, label: 'about.highlights.position' as const },
     { icon: <SchoolIcon />, label: 'about.highlights.certification' as const },
     { icon: <LanguageIcon />, label: 'about.highlights.languages' as const },
-  ];
+  ]
 
-  const skills = ['Complex Problem Solving', 'Creativity', 'Logical Thinking', 'Agile Mindset', 'Teamwork'];
+  const skills = ['Complex Problem Solving', 'Creativity', 'Logical Thinking', 'Agile Mindset', 'Teamwork']
 
   return (
     <Box id="about" component="section">
@@ -66,7 +66,7 @@ const About = () => {
         </Paper>
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default About;
+export default About

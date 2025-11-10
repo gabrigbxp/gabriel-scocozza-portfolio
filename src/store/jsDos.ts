@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 export const jsDosSlice = createSlice({
   name: 'jsDos',
@@ -11,8 +11,8 @@ export const jsDosSlice = createSlice({
       isFullscreen: !state.isFullscreen,
     }),
   },
-});
+})
 
-export const { toggleFullscreen } = jsDosSlice.actions;
+export const { toggleFullscreen } = jsDosSlice.actions
 
-export default jsDosSlice.reducer;
+export default jsDosSlice.reducer

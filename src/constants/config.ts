@@ -7,17 +7,17 @@ export const SECTIONS = [
   { id: 'games', label: 'header.games' },
   { id: 'this-app', label: 'header.thisApp' },
   { id: 'contact', label: 'header.contact' },
-] as const;
+] as const
 
-export const SCROLL_OFFSET = 72;
+export const SCROLL_OFFSET = 72
 
 export const WEATHER_CONFIG = {
   forecastDays: 4,
   geolocationTimeout: 8000,
   geolocationHighAccuracy: true,
-} as const;
+} as const
 
 export const HEADER_CONFIG = {
   scrollTriggerThreshold: 64,
   activeDetectionOffset: 96,
-} as const;
+} as const

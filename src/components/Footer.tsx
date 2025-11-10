@@ -1,16 +1,16 @@
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { useTranslation } from '@hooks';
-import { EXTERNAL_LINKS } from '@constants';
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import IconButton from '@mui/material/IconButton'
+import Tooltip from '@mui/material/Tooltip'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import { useTranslation } from '@hooks'
+import { EXTERNAL_LINKS } from '@constants'
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  const startYear = 2025;
-  const { t } = useTranslation();
+const Footer = () => {
+  const currentYear = new Date().getFullYear()
+  const startYear = 2025
+  const { t } = useTranslation()
 
   return (
     <Box
@@ -56,5 +56,7 @@ export default function Footer() {
         </Box>
       </Container>
     </Box>
-  );
+  )
 }
+
+export default Footer

@@ -1,10 +1,10 @@
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { WeatherForecastResponse } from 'services/weather';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import type { WeatherForecastResponse } from 'services/weather'
 
 export interface WeatherState {
-  isLoading: boolean;
-  error: string | null;
-  data: WeatherForecastResponse | null;
+  isLoading: boolean
+  error: string | null
+  data: WeatherForecastResponse | null
 }
 
 export const weatherSlice = createSlice({
@@ -19,8 +19,8 @@ export const weatherSlice = createSlice({
     setError: (state, action: PayloadAction<string | null>) => ({ ...state, error: action.payload }),
     setData: (state, action: PayloadAction<WeatherForecastResponse | null>) => ({ ...state, data: action.payload }),
   },
-});
+})
 
-export const { setLoading, setError, setData } = weatherSlice.actions;
+export const { setLoading, setError, setData } = weatherSlice.actions
 
-export default weatherSlice.reducer;
+export default weatherSlice.reducer

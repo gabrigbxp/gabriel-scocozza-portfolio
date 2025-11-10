@@ -390,4 +390,4 @@ export default {
         "I'd never used js-dos before, but I felt this was the perfect opportunity to implement a tool that's new to me and very interesting.",
     },
   },
-} as const;
+} as const

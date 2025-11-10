@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles'
 
 export const theme = createTheme({
   cssVariables: {
@@ -98,6 +98,6 @@ export const theme = createTheme({
       },
     },
   },
-});
+})
 
-export type AppTheme = typeof theme;
+export type AppTheme = typeof theme

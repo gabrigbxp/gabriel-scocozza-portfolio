@@ -1,21 +1,21 @@
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import { useTranslation } from '@hooks';
-import * as styles from './index.styles';
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import CardActions from '@mui/material/CardActions'
+import Button from '@mui/material/Button'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'
+import OpenInNewIcon from '@mui/icons-material/OpenInNew'
+import { useTranslation } from '@hooks'
+import * as styles from './index.styles'
 
 const Projects = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const projects = [
     {
@@ -49,7 +49,7 @@ const Projects = () => {
       github: 'https://github.com/gabrigbxp/not-airbnb-eslint-config',
       npm: 'https://www.npmjs.com/package/not-airbnb-eslint-config',
     },
-  ];
+  ]
 
   return (
     <Box id="projects" component="section">
@@ -135,7 +135,7 @@ const Projects = () => {
         ))}
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

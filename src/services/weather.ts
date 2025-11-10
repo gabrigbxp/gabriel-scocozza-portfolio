@@ -2,92 +2,88 @@
 // Docs: https://www.weatherapi.com/docs/
 
 export interface WeatherCondition {
-  text: string;
-  icon: string; // URL
-  code: number;
+  text: string
+  icon: string // URL
+  code: number
 }
 
 export interface WeatherCurrent {
-  last_updated_epoch: number;
-  last_updated: string;
-  temp_c: number;
-  temp_f: number;
-  condition: WeatherCondition;
-  wind_kph: number;
-  wind_dir: string;
-  cloud: number;
-  humidity: number;
-  feelslike_c: number;
-  feelslike_f: number;
+  last_updated_epoch: number
+  last_updated: string
+  temp_c: number
+  temp_f: number
+  condition: WeatherCondition
+  wind_kph: number
+  wind_dir: string
+  cloud: number
+  humidity: number
+  feelslike_c: number
+  feelslike_f: number
 }
 
 export interface WeatherDay {
-  maxtemp_c: number;
-  maxtemp_f: number;
-  mintemp_c: number;
-  mintemp_f: number;
-  avgtemp_c: number;
-  avgtemp_f: number;
-  maxwind_kph: number;
-  avghumidity: number;
-  condition: WeatherCondition;
+  maxtemp_c: number
+  maxtemp_f: number
+  mintemp_c: number
+  mintemp_f: number
+  avgtemp_c: number
+  avgtemp_f: number
+  maxwind_kph: number
+  avghumidity: number
+  condition: WeatherCondition
 }
 
 export interface WeatherForecastDay {
-  date: string; // YYYY-MM-DD
-  date_epoch: number;
-  day: WeatherDay;
+  date: string // YYYY-MM-DD
+  date_epoch: number
+  day: WeatherDay
 }
 
 export interface WeatherLocation {
-  name: string;
-  region: string;
-  country: string;
-  lat: number;
-  lon: number;
-  tz_id: string;
-  localtime: string;
+  name: string
+  region: string
+  country: string
+  lat: number
+  lon: number
+  tz_id: string
+  localtime: string
 }
 
 export interface WeatherForecastResponse {
-  location: WeatherLocation;
-  current: WeatherCurrent;
+  location: WeatherLocation
+  current: WeatherCurrent
   forecast: {
-    forecastday: WeatherForecastDay[];
-  };
+    forecastday: WeatherForecastDay[]
+  }
 }
 
-const BASE = 'https://api.weatherapi.com/v1';
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || '';
+const BASE = 'https://api.weatherapi.com/v1'
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || ''
 
 const fetchJson = async <T>(url: string): Promise<T> => {
-  const res = await fetch(url, { headers: { Accept: 'application/json' } });
+  const res = await fetch(url, { headers: { Accept: 'application/json' } })
   if (!res.ok) {
-    let detail = '';
+    let detail = ''
     try {
-      const body = await res.json();
-      detail = body?.error?.message || JSON.stringify(body);
+      const body = await res.json()
+      detail = body?.error?.message || JSON.stringify(body)
     } catch (e) {
-      void e;
+      void e
     }
-    throw new Error(`WeatherAPI error ${res.status}: ${detail}`);
+    throw new Error(`WeatherAPI error ${res.status}: ${detail}`)
   }
-  return res.json() as Promise<T>;
-};
+  return res.json() as Promise<T>
+}
 
 const buildForecastUrl = (q: string, days = 3, lang = 'en') => {
-  const p = new URLSearchParams({ key: API_KEY, q, days: String(days), aqi: 'no', alerts: 'no', lang });
-  return `${BASE}/forecast.json?${p.toString()}`;
-};
+  const p = new URLSearchParams({ key: API_KEY, q, days: String(days), aqi: 'no', alerts: 'no', lang })
+  return `${BASE}/forecast.json?${p.toString()}`
+}
 
-const getForecastByQuery = async (q: string, days = 3, lang = 'en') => {
-  return fetchJson<WeatherForecastResponse>(buildForecastUrl(q, days, lang));
-};
+const getForecastByQuery = async (q: string, days = 3, lang = 'en') =>
+  fetchJson<WeatherForecastResponse>(buildForecastUrl(q, days, lang))
 
-export const getForecastByCoords = async (lat: number, lon: number, days = 3, lang = 'en') => {
-  return getForecastByQuery(`${lat},${lon}`, days, lang);
-};
+export const getForecastByCoords = async (lat: number, lon: number, days = 3, lang = 'en') =>
+  getForecastByQuery(`${lat},${lon}`, days, lang)
 
-export const getForecastAutoIp = async (days = 3, lang = 'en') => {
-  return getForecastByQuery('auto:ip', days, lang);
-};
+export const getForecastAutoIp = async (days = 3, lang = 'en') => getForecastByQuery('auto:ip', days, lang)
