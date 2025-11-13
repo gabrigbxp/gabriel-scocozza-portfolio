@@ -16,9 +16,7 @@ createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
       <AppThemeProvider>
         <CssBaseline enableColorScheme />
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <App />
       </AppThemeProvider>
     </Provider>
   </StrictMode>,
