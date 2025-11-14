@@ -24,7 +24,7 @@ const Weather = () => {
 
   const days = useMemo(() => (data?.forecast?.forecastday ?? []).slice(0, WEATHER_CONFIG.forecastDays), [data])
 
-  const getTemp = (tempC: number, tempF: number) => Math.round(unit === 'C' ? tempC : tempF)
+  const getTemp = (tempC: number, tempF: number) => (unit === 'C' ? tempC : tempF)
 
   const fetchWeather = async (useGeo: boolean) => {
     if (useGeo && navigator.geolocation) {
@@ -113,7 +113,7 @@ const Weather = () => {
             {t('weather.next3Days')}
           </Typography>
           <Box sx={styles.forecastContainer}>
-            {days.slice(1).map((d: WeatherForecastDay) => (
+            {days.map((d: WeatherForecastDay) => (
               <Box key={d.date} sx={styles.forecastCard}>
                 <Typography variant="body2">{d.date}</Typography>
                 <img src={d.day.condition.icon} alt={d.day.condition.text} />

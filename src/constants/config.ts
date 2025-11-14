@@ -12,7 +12,7 @@ export const SECTIONS = [
 export const SCROLL_OFFSET = 72
 
 export const WEATHER_CONFIG = {
-  forecastDays: 4,
+  forecastDays: 3,
   geolocationTimeout: 8000,
   geolocationHighAccuracy: true,
 } as const
