@@ -96,6 +96,19 @@ const Experience = () => {
               )}
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
                 <CalendarTodayIcon fontSize="small" color="action" />
+                {job.currentPeriod && (
+                  <>
+                    <Typography variant="body2" color="text.secondary">
+                      {formatPeriod(job.currentPeriod.start, job.currentPeriod.end)}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      ({calculateDuration(job.currentPeriod.start, job.currentPeriod.end)})
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      +
+                    </Typography>
+                  </>
+                )}
                 <Typography variant="body2" color="text.secondary">
                   {formatPeriod(job.period.start, job.period.end)}
                 </Typography>

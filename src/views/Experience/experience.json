@@ -1,5 +1,34 @@
 [
   {
+    "id": "gray-line",
+    "company": "Gray Line Argentina",
+    "companyUrl": "http://graylineargentina.com/",
+    "position": "experience.jobs.gray-line.position",
+    "location": "Buenos Aires, Argentina",
+    "period": {
+      "start": "2014-11",
+      "end": "2016-02"
+    },
+    "additionalPeriod": {
+      "start": "2017-03",
+      "end": "2019-08"
+    },
+    "currentPeriod": {
+      "start": "2026-03",
+      "end": "present"
+    },
+    "responsibilities": [
+      "experience.jobs.gray-line.responsibilities.0",
+      "experience.jobs.gray-line.responsibilities.1",
+      "experience.jobs.gray-line.responsibilities.2",
+      "experience.jobs.gray-line.responsibilities.3",
+      "experience.jobs.gray-line.responsibilities.4",
+      "experience.jobs.gray-line.responsibilities.5",
+      "experience.jobs.gray-line.responsibilities.6"
+    ],
+    "technologies": ["JavaScript", "PHP", "JSON", "jQuery", "XML", "SVN", "HTML5", "MySQL", "Web Services"]
+  },
+  {
     "id": "psh",
     "company": "PSH",
     "companyUrl": "https://wearepsh.com/",
@@ -94,31 +123,6 @@
       "experience.jobs.servicios-computables.responsibilities.5"
     ],
     "technologies": ["MySQL", "GitLab", "Git", "Laravel", "PHP", "USB Printer on LAN", "Java"]
-  },
-  {
-    "id": "gray-line",
-    "company": "Gray Line Argentina",
-    "companyUrl": "http://gl-tours.com/aerolineas/index.php",
-    "position": "experience.jobs.gray-line.position",
-    "location": "Buenos Aires, Argentina",
-    "period": {
-      "start": "2014-11",
-      "end": "2016-02"
-    },
-    "additionalPeriod": {
-      "start": "2017-03",
-      "end": "2019-08"
-    },
-    "responsibilities": [
-      "experience.jobs.gray-line.responsibilities.0",
-      "experience.jobs.gray-line.responsibilities.1",
-      "experience.jobs.gray-line.responsibilities.2",
-      "experience.jobs.gray-line.responsibilities.3",
-      "experience.jobs.gray-line.responsibilities.4",
-      "experience.jobs.gray-line.responsibilities.5",
-      "experience.jobs.gray-line.responsibilities.6"
-    ],
-    "technologies": ["JavaScript", "PHP", "JSON", "jQuery", "XML", "SVN", "HTML5", "MySQL", "Web Services"]
   },
   {
     "id": "sip",
